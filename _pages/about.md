@@ -9,6 +9,19 @@ redirect_from:
 
 I am a postdoctoral researcher at University of Turin, Italy. I am part of the [EIDOS group](https://eidos.di.unito.it/) at the Computer Science Department. My research focuses on deep learning for medical imaging, with interests on contrastive learning, neuroimaging, multimodality, debiasing and robustness. I received a **double Ph.D.** from Télécom Paris (Institut Polytechnique de Paris) and University of Turin in 2023, supervised by Pietro Gori (Télécom Paris) and Marco Grangetto (University of Turin).
 
+Ongoing Research
+======
+
+Here is a summary of main main ongoing activities. If you are **interested in collaborations** do not hesitate to contact me!
+
+- **Foundation models / Neuroimaging** Learning generalizable representations from large cohorts of neuroimaging data with the aim of transferring knowledge to smaller clinical groups with different conditions (e.g. neurodegenerative and psychiatric disorders). Preliminary works: https://arxiv.org/abs/2408.07079 (AnatCL)
+- **Multimodal Learning** Improving representations by leveraging cross-modal interaction (e.g. using text to learn novel visual concepts https://arxiv.org/abs/2411.15611)
+- **Debiasing and Collateral Learning** Learning unbiased models from biased data, both in a supervised or unsupervised fashion. Also providing human-interpretable descriptions of spurious correlations in the data (https://arxiv.org/abs/2408.09570)
+
+Positions
+======
+- 2023 - now **Postdoctoral Researcher** in deep learning for medical imaging ([University of Turin](www.unito.it))
+
 Education
 ======
 - 2020-2023 **Ph.D.** in Computer Science at [Télécom Paris, France](https://www.telecom-paris.fr/en/home) (cotutelle with [University of Turin, Italy](www.unito.it)), with the thesis *Collateral-Free Learning of Deep Representations: From Natural Images to Biomedical Applications.*
