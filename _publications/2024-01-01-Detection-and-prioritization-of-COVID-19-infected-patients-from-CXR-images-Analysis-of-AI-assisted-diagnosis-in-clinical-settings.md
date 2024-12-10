@@ -1,6 +1,7 @@
 ---
 title: "Detection and prioritization of COVID-19 infected patients from CXR images: Analysis of AI-assisted diagnosis in clinical settings"
 collection: publications
+category: manuscripts
 permalink: /publication/2024-01-01-Detection-and-prioritization-of-COVID-19-infected-patients-from-CXR-images-Analysis-of-AI-assisted-diagnosis-in-clinical-settings
 date: 2024-01-01
 venue: 'Computational and Structural Biotechnology Journal'

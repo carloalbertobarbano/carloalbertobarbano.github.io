@@ -1,6 +1,6 @@
 ---
 title: "Multi-target stain normalization for histology slides"
-collection: publications
+collection: publicationsconferences
 permalink: /publication/2024-01-01-Multi-target-stain-normalization-for-histology-slides
 date: 2024-01-01
 venue: 'In the proceedings of 2nd International Workshop on Medical Optical Imaging and Virtual Microscopy Image Analysis (MOVI 2024)'

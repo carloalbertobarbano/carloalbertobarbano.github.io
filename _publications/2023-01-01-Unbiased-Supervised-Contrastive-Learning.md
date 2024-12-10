@@ -1,6 +1,6 @@
 ---
 title: "Unbiased Supervised Contrastive Learning"
-collection: publications
+collection: publicationsconferences
 permalink: /publication/2023-01-01-Unbiased-Supervised-Contrastive-Learning
 date: 2023-01-01
 venue: 'In the proceedings of The Eleventh International Conference on Learning Representations'
