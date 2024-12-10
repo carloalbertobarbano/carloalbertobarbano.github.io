@@ -1,6 +1,7 @@
 ---
 title: "Bridging the gap between debiasing and privacy for deep learning"
-collection: publicationsconferences
+collection: publications
+category: conferences
 permalink: /publication/2021-01-01-Bridging-the-gap-between-debiasing-and-privacy-for-deep-learning
 date: 2021-01-01
 venue: 'In the proceedings of 2021 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)'

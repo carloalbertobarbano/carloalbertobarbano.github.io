@@ -1,6 +1,7 @@
 ---
 title: "AI-Assisted Diagnosis for Covid-19 CXR Screening: from Data Collection to Clinical Validation"
-collection: publicationsconferences
+collection: publications
+category: conferences
 permalink: /publication/2024-01-01-AI-Assisted-Diagnosis-for-Covid-19-CXR-Screening-from-Data-Collection-to-Clinical-Validation
 date: 2024-01-01
 venue: 'In the proceedings of 2024 IEEE International Symposium on Biomedical Imaging (ISBI)'

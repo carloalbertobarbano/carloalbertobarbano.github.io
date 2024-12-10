@@ -117,7 +117,7 @@ for pubsource in publist:
             
             md += """collection: """ +  publist[pubsource]["collection"]["name"]
             
-            md += "\ncategory: " + "manuscripts" if pubsource == "journal" else "conferences"
+            md += "\ncategory: " + ("manuscripts" if pubsource == "journal" else "conferences")
 
             md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"]  + html_filename
             

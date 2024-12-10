@@ -1,6 +1,7 @@
 ---
 title: "UniToPatho, a labeled histopathological dataset for colorectal polyps classification and adenoma dysplasia grading"
-collection: publicationsconferences
+collection: publications
+category: conferences
 permalink: /publication/2021-01-01-UniToPatho-a-labeled-histopathological-dataset-for-colorectal-polyps-classification-and-adenoma-dysplasia-grading
 date: 2021-01-01
 venue: 'In the proceedings of IEEE International Conference on Image Processing (ICIP), 2021'

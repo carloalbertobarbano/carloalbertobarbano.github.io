@@ -1,6 +1,7 @@
 ---
 title: "Integrating Prior Knowledge in Contrastive Learning with Kernel"
-collection: publicationsconferences
+collection: publications
+category: conferences
 permalink: /publication/2023-01-01-Integrating-Prior-Knowledge-in-Contrastive-Learning-with-Kernel
 date: 2023-01-01
 venue: 'In the proceedings of Proceedings of the 40th International Conference on Machine Learning'

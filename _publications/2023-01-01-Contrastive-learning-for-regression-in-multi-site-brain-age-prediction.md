@@ -1,6 +1,7 @@
 ---
 title: "Contrastive learning for regression in multi-site brain age prediction"
-collection: publicationsconferences
+collection: publications
+category: conferences
 permalink: /publication/2023-01-01-Contrastive-learning-for-regression-in-multi-site-brain-age-prediction
 date: 2023-01-01
 venue: 'In the proceedings of 2023 IEEE International Symposium on Biomedical Imaging (ISBI)'

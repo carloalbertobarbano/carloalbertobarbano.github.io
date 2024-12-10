@@ -1,6 +1,7 @@
 ---
 title: "A Two-Step Radiologist-Like Approach for Covid-19 Computer-Aided Diagnosis from Chest X-Ray Images"
-collection: publicationsconferences
+collection: publications
+category: conferences
 permalink: /publication/2022-01-01-A-Two-Step-Radiologist-Like-Approach-for-Covid-19-Computer-Aided-Diagnosis-from-Chest-X-Ray-Images
 date: 2022-01-01
 venue: 'In the proceedings of Image Analysis and Processing--ICIAP 2022: 21st International Conference, Lecce, Italy, May 23--27, 2022, Proceedings, Part I'
