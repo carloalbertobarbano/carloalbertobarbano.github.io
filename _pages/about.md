@@ -14,9 +14,9 @@ Ongoing Research
 
 Here is a summary of main main ongoing activities. If you are **interested in collaborations** do not hesitate to contact me!
 
-- **Foundation models / Neuroimaging** Learning generalizable representations from large cohorts of neuroimaging data with the aim of transferring knowledge to smaller clinical groups with different conditions (e.g. neurodegenerative and psychiatric disorders). Preliminary works: https://arxiv.org/abs/2408.07079 (AnatCL)
-- **Multimodal Learning** Improving representations by leveraging cross-modal interaction (e.g. using text to learn novel visual concepts https://arxiv.org/abs/2411.15611)
-- **Debiasing and Collateral Learning** Learning unbiased models from biased data, both in a supervised or unsupervised fashion. Also providing human-interpretable descriptions of spurious correlations in the data (https://arxiv.org/abs/2408.09570)
+- **Foundation models / Neuroimaging** Learning generalizable representations from large cohorts of neuroimaging data with the aim of transferring knowledge to smaller clinical groups with different conditions (e.g. neurodegenerative and psychiatric disorders). Relevant work: [https://arxiv.org/abs/2408.07079](https://arxiv.org/abs/2408.07079) (AnatCL)
+- **Multimodal Learning** Improving representations by leveraging cross-modal interaction (e.g. using text to learn novel visual concepts [https://arxiv.org/abs/2411.15611](https://arxiv.org/abs/2411.15611))
+- **Debiasing and Collateral Learning** Learning unbiased models from biased data, both in a supervised or unsupervised fashion. Also providing human-interpretable descriptions of spurious correlations in the data ([https://arxiv.org/abs/2408.09570](https://arxiv.org/abs/2408.09570))
 
 Positions
 ======
