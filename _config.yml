@@ -14,7 +14,7 @@ name                     : &name "Carlo Alberto Barbano"
 description              : &description "Postdoctoral researcher at University of Turin"
 url                      : https://carloalbertobarbano.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "carloalbertobarbano/carloalbertobarbano.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Carlo Alberto Barbano"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoctoral researcher at University of Turin"
+  bio              : "Postdoctoral researcher in Deep Learning for Medical Imaging"
   location         : "Turin, Italy"
   employer         : "University of Turin"
   uri              : # URL
