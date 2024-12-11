@@ -20,7 +20,7 @@ Here is a summary of main main ongoing activities. If you are **interested in co
 
 Positions
 ======
-- 2023 - now **Postdoctoral Researcher** in deep learning for medical imaging ([University of Turin](www.unito.it))
+- 2023 - now **Postdoctoral Researcher** in deep learning for medical imaging ([University of Turin](https://www.unito.it))
 
 Education
 ======
