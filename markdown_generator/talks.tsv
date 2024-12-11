@@ -1,10 +1,11 @@
 title	type	url_slug	venue	date	location	talk_url	description
-Bridging the gap between debiasing and privacy for deep learning	Conference proceedings talk	talk-1	First International Workshop on Responsible Pattern Recognition and Machine Intelligence (R-PR&MI)	2021-09	Remote		
-From H&E to pixels: digital pathology applications for colon cancer diagnosis	Lecture	lecture-1	DeepHealth Winter School 2022	2022-01	Remote		
-Artificial Intelligence vs Covid-19	Talk	talk-2	ASL TO3	2023-03	"Pinerolo, Italy"		
-Trustworthy Deep Learning in critical applications: a biomedical imaging experience	Talk	talk-3	ASL TO3 Radiomics Lab	2024-03	"Rivoli, Italy"		
-AI and Imaging: towards new frontiers in data analysis	Talk	talk-4	"MorFuture, Neuroscience Dept., University of Turin"	2024-04	"Turin, Italy"		
-Current challenges and perspectives in Deep Learning	Talk	talk-5	National Center of Adrotherapy Oncology (CNAO)	2024-4	"Pavia, Italy"		
-Contrastive Contrastive Learning and Applications in Neuroimaging	Lecture	lecture-2	"Computer Science dept., University of Turin"	2024-4	"Turin, Italy"		
-Introduction to Machine Learning \& Deep Learning for signal and data analysis	Lecture	lecture-3	National Center of Adrotherapy Oncology (CNAO)	2024-5	"Pavia, Italy"		
-Possible Applications of Machine Learning Techniques to CNAO-based Applications	Talk	talk-6	National Center of Adrotherapy Oncology (CNAO)	2024-06	"Pavia, Italy"		
+Bridging the gap between debiasing and privacy for deep learning	Conference proceedings talk	talk-1	First International Workshop on Responsible Pattern Recognition and Machine Intelligence (R-PR&MI)	2021-09-17	Remote		
+From H&E to pixels: digital pathology applications for colon cancer diagnosis	Lecture	lecture-1	DeepHealth Winter School 2022	2022-01-25	Remote		
+Unbiased Supervised Contrastive Learning	Talk	talk-7	NeuroSpin	2022-12-02	CEA Paris-Saclay		
+Artificial Intelligence vs Covid-19	Talk	talk-2	ASL TO3	2023-03-10	"Pinerolo, Italy"		
+Trustworthy Deep Learning in critical applications: a biomedical imaging experience	Talk	talk-3	ASL TO3 Radiomics Lab	2024-03-05	"Rivoli, Italy"		
+AI and Imaging: towards new frontiers in data analysis	Talk	talk-4	"MorFuture, Neuroscience Dept., University of Turin"	2024-04-11	"Turin, Italy"		
+Current challenges and perspectives in Deep Learning	Talk	talk-5	National Center of Adrotherapy Oncology (CNAO)	2024-04-10	"Pavia, Italy"		
+Contrastive Contrastive Learning and Applications in Neuroimaging	Lecture	lecture-2	"Computer Science dept., University of Turin"	2024-05-13	"Turin, Italy"		
+Introduction to Machine Learning \& Deep Learning for signal and data analysis	Lecture	lecture-3	National Center of Adrotherapy Oncology (CNAO)	2024-05-15	"Pavia, Italy"		
+Possible Applications of Machine Learning Techniques to CNAO-based Applications	Talk	talk-6	National Center of Adrotherapy Oncology (CNAO)	2024-06-20	"Pavia, Italy"		
