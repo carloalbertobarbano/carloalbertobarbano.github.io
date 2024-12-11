@@ -6,7 +6,7 @@ tags:
   - open positions
 ---
 
-[EIDOS Lab](eidos.di.unito.it) invites applications for a two-year postdoctoral researcher position focusing on developing cutting-edge methods for efficient fine-tuning of Large Vision-Language Models (LVLMs). This research will explore Low-Rank Adaptation (LoRA) combined with advanced pruning, quantization, and simplification techniques to address scalability and resource constraints challenges for real-world applications.
+[EIDOS Lab](https://www.eidos.di.unito.it) invites applications for a two-year postdoctoral researcher position focusing on developing cutting-edge methods for efficient fine-tuning of Large Vision-Language Models (LVLMs). This research will explore Low-Rank Adaptation (LoRA) combined with advanced pruning, quantization, and simplification techniques to address scalability and resource constraints challenges for real-world applications.
 
 The position is funded by the European project DARE. The goal is to design novel methodologies for replacing fully connected layers of Transformers with lower-rank trainable matrices, enabling reduced parameter fine-tuning, faster inference, and enhanced model compressibility.
 
