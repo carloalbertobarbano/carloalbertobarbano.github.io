@@ -24,8 +24,8 @@ Positions
 
 Education
 ======
-- 2020-2023 **Ph.D.** in Computer Science at [Télécom Paris, France](https://www.telecom-paris.fr/en/home) (cotutelle with [University of Turin, Italy](www.unito.it)), with the thesis *Collateral-Free Learning of Deep Representations: From Natural Images to Biomedical Applications.*
-- 2018-2020 **Master's degree** in Artificial Intelligence at [University of Turin, Italy](www.unito.it)
+- 2020-2023 **Ph.D.** in Computer Science at [Télécom Paris, France](https://www.telecom-paris.fr/en/home) (cotutelle with [University of Turin, Italy](https://www.unito.it)), with the thesis *Collateral-Free Learning of Deep Representations: From Natural Images to Biomedical Applications.*
+- 2018-2020 **Master's degree** in Artificial Intelligence at [University of Turin, Italy](https://www.unito.it)
 
 Selected Publications
 ======
