@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Deep Learning and Medical Imaging"
+title: "Homepage"
 author_profile: true
 redirect_from: 
   - /about/
