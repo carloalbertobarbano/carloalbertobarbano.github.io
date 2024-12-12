@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Carlo Alberto Barbano"
+title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Carlo Alberto Barbano"
 description              : &description "Postdoctoral researcher at University of Turin"
