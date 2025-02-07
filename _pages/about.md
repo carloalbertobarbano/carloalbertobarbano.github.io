@@ -32,11 +32,10 @@ Education
 
 Selected Publications
 ======
+- **Contrastive learning for regression in multi‑site brain age prediction** **(Best poster award)**, <u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, and P. Gori. ISBI, 2023.
 - **Unbiased Supervised Contrastive Learning**, <u>C. A. Barbano</u>, B. Dufumier, E. Tartaglione, M. Grangetto,
 and P. Gori. ICLR, 2023. 
 - **Integrating Prior Knowledge in Contrastive Learning with Kernel**, B. Dufumier, <u>C. A. Barbano</u>, R.
 Louiset, E. Duchesnay, and P. Gori. ICML, 2023 
-- **Contrastive learning for regression in multi‑site brain age prediction** **(Best poster award)**,
-<u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, and P. Gori. ISBI, 2023. 
 - **End: Entangling and disentangling deep representations for bias correction**, E. Tartaglione,
 <u>C. A. Barbano</u>, and M. Grangetto. CVPR, 2021. 
