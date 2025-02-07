@@ -10,6 +10,7 @@ redirect_from:
 I am a postdoctoral researcher at University of Turin, Italy. I am part of the [EIDOS group](https://eidos.di.unito.it/) at the Computer Science Department. My research focuses on deep learning for medical imaging, with interests on contrastive learning, neuroimaging, multimodality, debiasing and robustness. I received a **double Ph.D.** from Télécom Paris (Institut Polytechnique de Paris) and University of Turin in 2023, supervised by Pietro Gori (Télécom Paris) and Marco Grangetto (University of Turin).
 
 **News:**
+- *Jan. 2025:* I am currently a Visiting Researcher at [Inria MIND](https://team.inria.fr/mind/) with [Prof. Demian Wassermann](https://pages.saclay.inria.fr/demian.wassermann/), to study the connection between functional connectivity and cognition using contrastive learning.
 - *Dec. 2024:* I am happy to announce that I am now a member of [ELLIS Society](https://ellis.eu/) 🎉! 
 
 Ongoing Research
@@ -22,8 +23,9 @@ Here is a summary of main main ongoing activities. If you are **interested in co
 - **Debiasing and Collateral Learning** Learning unbiased models from biased data, both in a supervised or unsupervised fashion. Also providing human-interpretable descriptions of spurious correlations in the data ([https://arxiv.org/abs/2408.09570](https://arxiv.org/abs/2408.09570))
 
 Positions
-======
-- 2023 - now **Postdoctoral Researcher** in deep learning for medical imaging ([University of Turin](https://www.unito.it))
+====== 
+- Jan. 2025 - now **Visiting Researcher** at [Inria MIND](https://team.inria.fr/mind/)
+- Dec. 2023 - now **Postdoctoral Researcher** in deep learning for medical imaging ([University of Turin](https://www.unito.it))
 
 Education
 ======
