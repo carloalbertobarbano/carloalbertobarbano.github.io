@@ -12,6 +12,7 @@ I am a postdoctoral researcher at University of Turin, Italy. I am part of the [
 **News:**
 - *Jan. 2025:* I am currently a Visiting Researcher at [Inria MIND](https://team.inria.fr/mind/) with [Prof. Demian Wassermann](https://pages.saclay.inria.fr/demian.wassermann/), to study the connection between functional connectivity and cognition using contrastive learning.
 - *Dec. 2024:* I am happy to announce that I am now a member of [ELLIS Society](https://ellis.eu/) 🎉! 
+- *Mar. 2024:* I am member of the newborn [Asl To3 Radiomics Lab](https://www.aslto3.piemonte.it/azienda/progetti/progetti-aziendali/aslto3-radiomics-lab/?highlight=radiomics%20lab) in Rivoli, Italy. 
 
 Ongoing Research
 ======
