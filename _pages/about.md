@@ -35,10 +35,11 @@ Education
 
 Selected Publications
 ======
-- **Contrastive learning for regression in multi‑site brain age prediction** **(Best poster award)**, <u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, and P. Gori. ISBI, 2023.
+- **Anatomical foundation models for brain MRIs**, <u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto. Pattern Recognition Letters, 2025. [[Paper](https://www.sciencedirect.com/science/article/pii/S0167865525003848)]
+- **Contrastive learning for regression in multi‑site brain age prediction** **(Best poster award)**, <u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, and P. Gori. ISBI, 2023. [[Paper](https://arxiv.org/abs/2211.08326)]
 - **Unbiased Supervised Contrastive Learning**, <u>C. A. Barbano</u>, B. Dufumier, E. Tartaglione, M. Grangetto,
-and P. Gori. ICLR, 2023. 
-- **Integrating Prior Knowledge in Contrastive Learning with Kernel**, B. Dufumier, <u>C. A. Barbano</u>, R.
+and P. Gori. ICLR, 2023. [[Paper](https://arxiv.org/abs/2211.05568)]
+- **Integrating Prior Knowledge in Contrastive Learning with Kernel**, B. Dufumier, <u>C. A. Barbano</u>, R. [[Paper](https://arxiv.org/abs/2206.01646)]
 Louiset, E. Duchesnay, and P. Gori. ICML, 2023 
 - **End: Entangling and disentangling deep representations for bias correction**, E. Tartaglione,
-<u>C. A. Barbano</u>, and M. Grangetto. CVPR, 2021. 
+<u>C. A. Barbano</u>, and M. Grangetto. CVPR, 2021. [[Paper](https://arxiv.org/abs/2103.02023)]
