@@ -1,13 +1,14 @@
 ---
 permalink: /
-title: "Homepage"
+title: Homepage
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+redirect_from: [/about/, /about.html]
 ---
 
-I am a postdoctoral researcher at University of Turin, Italy. I am part of the [EIDOS group](https://eidos.di.unito.it/) at the Computer Science Department. My research focuses on deep learning for medical imaging, with interests on contrastive learning, neuroimaging, multimodality, debiasing and robustness. I received a **double Ph.D.** from Télécom Paris (Institut Polytechnique de Paris) and University of Turin in 2023, supervised by Pietro Gori (Télécom Paris) and Marco Grangetto (University of Turin).
+I am a Postdoctoral Researcher at Inria Saclay, where I am part of the [MIND (Models and Inference for Neuroimaging Data)](https://team.inria.fr/mind) team. My work lies at the intersection of deep learning, neuroimaging, and neuroscience. I aim to develop models that learn robust, generalizable representations of the brain from large-scale datasets, supporting both clinical neuroscience and cognitive modeling.
+
+Before joining Inria, I was a postdoctoral researcher at University of Turin, Italy, in the [EIDOS group](https://
+eidos.di.unito.it/) at the Computer Science Department, working on deep learning for medical imaging, with interests on contrastive learning, neuroimaging, multimodality, debiasing and robustness. I received a **double Ph.D.** from Télécom Paris (Institut Polytechnique de Paris) and University of Turin in 2023, supervised by Pietro Gori (Télécom Paris) and Marco Grangetto (University of Turin).
 
 **News:**
 - *Jan. 2025:* I am currently a Visiting Researcher at [Inria MIND](https://team.inria.fr/mind/) with [Prof. Demian Wassermann](https://pages.saclay.inria.fr/demian.wassermann/), to study the connection between functional connectivity and cognition using contrastive learning.
