@@ -18,11 +18,35 @@ eidos.di.unito.it/) at the Computer Science Department, working on deep learning
 Ongoing Research
 ======
 
-Here is a summary of main main ongoing activities. If you are **interested in collaborations** do not hesitate to contact me!
+My research focuses on three main areas at the intersection of deep learning and neuroimaging. If you are **interested in collaborations** do not hesitate to contact me!
 
-- **Foundation models / Neuroimaging** Learning generalizable representations from large cohorts of neuroimaging data with the aim of transferring knowledge to smaller clinical groups with different conditions (e.g. neurodegenerative and psychiatric disorders). Relevant work: [https://arxiv.org/abs/2408.07079](https://arxiv.org/abs/2408.07079) (AnatCL)
-- **Multimodal Learning** Improving representations by leveraging cross-modal interaction (e.g. using text to learn novel visual concepts [https://arxiv.org/abs/2411.15611](https://arxiv.org/abs/2411.15611))
-- **Debiasing and Collateral Learning** Learning unbiased models from biased data, both in a supervised or unsupervised fashion. Also providing human-interpretable descriptions of spurious correlations in the data ([https://arxiv.org/abs/2408.09570](https://arxiv.org/abs/2408.09570))
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin: 30px 0;">
+
+<div style="text-align: center;">
+  <a href="/research/contrastive-learning/">
+    <img src="/images/research/axis1.png" alt="Contrastive Representation Learning" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+  </a>
+  <h3><a href="/research/contrastive-learning/">Contrastive Representation Learning</a></h3>
+  <p>Learning robust, generalizable representations through contrastive objectives for medical imaging and neuroimaging. Self-supervised learning, unbiased contrastive frameworks, and multi-site harmonization.</p>
+</div>
+
+<div style="text-align: center;">
+  <a href="/research/debiasing-collateral-learning/">
+    <img src="/images/research/axis2.png" alt="Collateral Learning and Debiasing" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+  </a>
+  <h3><a href="/research/debiasing-collateral-learning/">Collateral Learning and Debiasing</a></h3>
+  <p>Developing robust AI systems by identifying and mitigating spurious correlations in biased training data. Human-interpretable explanations of discovered biases for trustworthy clinical AI.</p>
+</div>
+
+<div style="text-align: center;">
+  <a href="/research/foundation-normative-modeling/">
+    <img src="/images/research/axis3.png" alt="Foundation and Normative Modeling in Neuroimaging" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+  </a>
+  <h3><a href="/research/foundation-normative-modeling/">Foundation and Normative Modeling</a></h3>
+  <p>Pre-training on large-scale neuroimaging datasets to learn generalizable brain representations. Effective transfer to rare diseases and small clinical populations.</p>
+</div>
+
+</div>
 
 Positions
 ====== 
