@@ -21,7 +21,7 @@ repository               : "carloalbertobarbano/carloalbertobarbano.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile-hero.jpg"
+  avatar           : "profile.png"
   name             : "Carlo Alberto Barbano"
   pronouns         : # example: "she/her"  
   bio              : "Starting Researcher working on foundation models for fMRI"
