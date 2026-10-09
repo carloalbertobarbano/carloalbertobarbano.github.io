@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Carlo Alberto Barbano"
 title_separator          : "-"
 name                     : &name "Carlo Alberto Barbano"
-description              : &description "Postdoctoral researcher at Inria Saclay"
+description              : &description "Starting Researcher at Inria Saclay (MIND). Foundation models for fMRI."
 url                      : https://carloalbertobarbano.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "carloalbertobarbano/carloalbertobarbano.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Carlo Alberto Barbano"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoctoral researcher working on AI for neuroscience"
+  bio              : "Starting Researcher working on foundation models for fMRI"
   location         : "Saclay, France"
   employer         : "Inria Saclay"
   uri              : # URL
@@ -212,13 +212,7 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
     output: true
     permalink: /:collection/:path/
   #talks:
