@@ -22,16 +22,35 @@ redirect_from: [/about/, /about.html]
 </header>
 
 <section class="home-research">
-  <div class="wrap" markdown="1">
+  <div class="wrap" markdown="0">
+    <h2>Research</h2>
+    <p>I work with <a href="https://pages.saclay.inria.fr/demian.wassermann/">Demian Wassermann</a> in the <a href="https://team.inria.fr/mind/">MIND</a> team on foundation models for fMRI and on predicting behaviour from brain activity. Earlier work covered contrastive learning, debiasing, and foundation models for anatomical MRI.</p>
 
-## Research
+    <article class="project project--featured">
+      <div class="project-head">
+        <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
+        <span class="project-tag">Preprint, 2026</span>
+      </div>
+      <p>A Prior-Data Fitted Network for brain–behaviour prediction. Meta-trained on synthetic tasks built from ~7.7k real FC matrices, it predicts behavioural scores from a small labelled context in a single forward pass, without refitting.</p>
+      <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview: real connectomes, sampled mechanisms, meta-training a transformer, prediction on new data">
+      <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
+    </article>
 
-I am a Starting Researcher in the [MIND (Models and Inference for Neuroimaging Data)](https://team.inria.fr/mind/) team at Inria Saclay, working with [Demian Wassermann](https://pages.saclay.inria.fr/demian.wassermann/). My work is at the intersection of deep learning, neuroimaging, and neuroscience. At the moment I mainly work on foundation models for fMRI, and I am also interested in the connection between functional connectivity and cognition.
+    <article class="project">
+      <div class="project-head">
+        <h3><a href="/research/#open-fmind">Open-fMIND</a></h3>
+        <span class="project-tag">Coming soon</span>
+      </div>
+      <p>An open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and FC matrices for several atlases.</p>
+      <ul class="project-stats">
+        <li><strong>14,016</strong> subjects</li>
+        <li><strong>52,505</strong> functional runs</li>
+        <li><strong>52</strong> atlases</li>
+      </ul>
+      <p class="project-links"><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></p>
+    </article>
 
-Earlier work covered contrastive representation learning, debiasing and robustness, and foundation models for anatomical MRI.
-
-If you are interested in collaborating, do not hesitate to [contact me](mailto:carlo.barbano@inria.fr).
-
+    <p class="home-more">If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>
   </div>
 </section>
 
@@ -39,6 +58,7 @@ If you are interested in collaborating, do not hesitate to [contact me](mailto:c
   <div class="wrap" markdown="0">
     <h2>News</h2>
     <ul>
+      <li><span class="date">Sep. 2026</span><span><a href="https://inria.hal.science/hal-05767107">BrainPFN</a> preprint is out.</span></li>
       <li><span class="date">Nov. 2025</span><span>I am now a <strong>Starting Researcher</strong> at <a href="https://team.inria.fr/mind/">Inria Saclay, MIND team</a>.</span></li>
       <li><span class="date">Jan. 2025</span><span>Visiting Researcher at <a href="https://team.inria.fr/mind/">Inria MIND</a>, studying the link between functional connectivity and cognition with contrastive learning.</span></li>
       <li><span class="date">Dec. 2024</span><span>Became a member of the <a href="https://ellis.eu/">ELLIS Society</a>.</span></li>
@@ -51,6 +71,11 @@ If you are interested in collaborating, do not hesitate to [contact me](mailto:c
   <div class="wrap" markdown="0">
     <h2>Selected publications</h2>
     <ul>
+      <li>
+        <span class="title"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a></span>
+        <span class="meta"><u>C. A. Barbano</u>, D. Wassermann</span>
+        <span class="meta"><span class="venue">Preprint</span>, 2026</span>
+      </li>
       <li>
         <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a></span>
         <span class="meta"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto</span>

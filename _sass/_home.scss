@@ -109,3 +109,57 @@ $home-line: #e6e8f0;
   .home-cols { grid-template-columns: 1fr; gap: 0; }
   .home-news li { grid-template-columns: 1fr; gap: 0; }
 }
+
+.home-narrow { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+
+.home h3 { margin: 0; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.01em; }
+.home h3 a { color: $home-ink; }
+
+.home-research > .wrap > p:first-of-type { margin-bottom: 2rem; }
+.home-research .home-more { font-weight: 400; }
+
+.project {
+  border: 1px solid $home-line;
+  border-radius: 12px;
+  padding: 1.5rem 1.6rem;
+  margin: 0 0 1.25rem;
+  p { margin: 0.6rem 0 0; }
+}
+.project--featured {
+  border-color: rgba($home-accent, 0.35);
+  box-shadow: 0 6px 24px rgba($home-ink, 0.06);
+}
+.project-head { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
+.project-tag {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: $home-muted;
+}
+.project-figure { display: block; width: 100%; height: auto; margin: 1.1rem 0 0; border-radius: 8px; }
+.project-links {
+  display: flex; flex-wrap: wrap; gap: 1.25rem;
+  font-weight: 600; font-size: 0.95rem;
+  a:after { content: " →"; }
+}
+.home .project-stats {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 2rem;
+  list-style: none; margin: 0.9rem 0 0; padding: 0;
+  color: $home-muted; font-size: 0.92rem;
+  strong { display: block; color: $home-ink; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.01em; }
+}
+
+.page-head {
+  margin-bottom: 1.5rem;
+  h1 { margin: 0 0 0.5rem; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; }
+  p { margin: 0.3rem 0; color: $home-muted; font-size: 1.1rem; }
+  .crumb { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .byline { font-size: 0.95rem; }
+  .project-links { margin-top: 0.8rem; font-size: 0.95rem; }
+}
+.home-narrow {
+  h2 { margin-top: 2.5rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.5rem; }
+  figure { margin: 1.5rem 0; }
+  figcaption { color: $home-muted; font-family: $sans-serif; font-size: 0.88rem; margin-top: 0.5rem; }
+  section { padding: 0; }
+}
