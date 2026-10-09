@@ -41,8 +41,9 @@ layout: home
     </article>
 
   <article class="project" id="earlier">
-    <div class="project-head"><h3>Earlier work</h3></div>
-    <p>Contrastive representation learning, debiasing and robustness to confounders, and foundation models for anatomical brain MRI. See <a href="/publications/">publications</a>.</p>
+    <div class="project-head"><h3><a href="/research/earlier-work/">Earlier work</a></h3><span class="project-tag">2020–2025</span></div>
+    <p>Contrastive representation learning, debiasing, foundation and normative models of brain anatomy, and medical imaging applications.</p>
+    <p class="project-links"><a href="/research/earlier-work/">Details</a><a href="/publications/">Publications</a></p>
   </article>
 </section>
 

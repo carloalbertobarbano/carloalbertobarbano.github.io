@@ -191,3 +191,26 @@ $home-prose: 46rem;
   .project { padding: 1.1rem 1rem; }
   .project-head .project-tag { margin-left: 0; }
 }
+
+/* Earlier-work themes */
+.home-narrow .theme {
+  display: grid; grid-template-columns: 1fr minmax(14rem, 22rem); gap: 2.5rem; align-items: start;
+  padding: 2rem 0; border-top: 1px solid $home-line;
+  h2 { margin-top: 0; }
+  .theme-text > p { max-width: $home-prose; }
+}
+.home-narrow .theme--wide { grid-template-columns: 1fr; }
+.home-narrow .theme:not(:has(.theme-figure)) { grid-template-columns: 1fr; }
+.home-narrow .theme-items {
+  list-style: none; padding: 0; margin: 1rem 0 0; max-width: $home-prose;
+  li { padding: 0.7rem 0; border-top: 1px solid $home-line; margin: 0; }
+  li:first-child { border-top: 0; }
+  .ref { display: block; color: $home-muted; font-size: 0.9rem; margin-top: 0.2rem; }
+}
+.theme-figure { display: block; width: 100%; height: auto; border-radius: 8px; }
+.theme--wide .theme-figure { max-width: 1000px; }
+
+@media (max-width: 800px) {
+  .home-narrow .theme { grid-template-columns: 1fr; }
+  .theme-figure--tall { max-width: 20rem; }
+}
