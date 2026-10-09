@@ -10,7 +10,7 @@ redirect_from: [/about/, /about.html]
     <img class="hero-photo" src="/images/profile-hero.jpg" alt="Carlo Alberto Barbano">
     <div class="hero-text">
       <h1>Carlo Alberto Barbano</h1>
-      <p class="lede">Starting Researcher at Inria Saclay, in the <a href="https://team.inria.fr/mind/">MIND</a> team. I work on foundation models for fMRI.</p>
+      <p class="lede">Starting Researcher in the <a href="https://team.inria.fr/mind/">MIND</a> team at Inria Saclay, working with <a href="https://pages.saclay.inria.fr/demian.wassermann/">Demian Wassermann</a> on foundation models for fMRI and brain–behaviour prediction.</p>
       <nav class="home-links">
         <a class="primary" href="mailto:carlo.barbano@inria.fr">Contact</a>
         <a href="{{ site.author.googlescholar }}">Google Scholar</a>
@@ -24,26 +24,25 @@ redirect_from: [/about/, /about.html]
 <section class="home-research">
   <div class="wrap" markdown="0">
     <h2>Research</h2>
-    <p>I work with <a href="https://pages.saclay.inria.fr/demian.wassermann/">Demian Wassermann</a> in the <a href="https://team.inria.fr/mind/">MIND</a> team on foundation models for fMRI and on predicting behaviour from brain activity. Earlier work covered contrastive learning, debiasing, and foundation models for anatomical MRI.</p>
 
-    <article class="project project--featured project--stacked">
+    <article class="project project--featured">
       <div class="project-head">
         <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
+        <p class="project-sub">Amortized brain–behaviour prediction with Prior-Data Fitted Networks.</p>
         <span class="project-tag">Preprint, 2026</span>
-        <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
       </div>
-      <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks.</p>
       <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview: real connectomes, sampled mechanisms, meta-training a transformer, prediction on new data">
+      <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
     </article>
 
     <article class="project project--split">
       <div class="project-body">
-      <div class="project-head">
-        <h3><a href="/research/#open-fmind">Open-fMIND</a></h3>
-        <span class="project-tag">Coming soon</span>
-      </div>
-      <p>An open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and FC matrices for several atlases.</p>
-      <p class="project-links"><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></p>
+        <div class="project-head">
+          <h3><a href="/research/#open-fmind">Open-fMIND</a></h3>
+          <span class="project-tag">Coming soon</span>
+        </div>
+        <p>An open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and FC matrices for several atlases.</p>
+        <p class="project-links"><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></p>
       </div>
       <ul class="project-stats">
         <li><strong>14,016</strong> subjects</li>
@@ -52,12 +51,13 @@ redirect_from: [/about/, /about.html]
       </ul>
     </article>
 
-    <p class="home-more">If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>
+    <p class="home-more">Earlier work covered contrastive learning, debiasing, and foundation models for anatomical MRI. If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>
   </div>
 </section>
 
-<section class="home-news">
-  <div class="wrap" markdown="0">
+<section class="home-updates">
+  <div class="wrap home-cols" markdown="0">
+    <div class="home-news">
     <h2>News</h2>
     <ul>
       <li><span class="date">Sep. 2026</span><span><a href="https://inria.hal.science/hal-05767107">BrainPFN</a> preprint is out.</span></li>
@@ -66,11 +66,8 @@ redirect_from: [/about/, /about.html]
       <li><span class="date">Dec. 2024</span><span>Became a member of the <a href="https://ellis.eu/">ELLIS Society</a>.</span></li>
       <li><span class="date">Mar. 2024</span><span>Member of the newborn <a href="https://www.aslto3.piemonte.it/azienda/progetti/progetti-aziendali/aslto3-radiomics-lab/">ASL TO3 Radiomics Lab</a> in Rivoli, Italy.</span></li>
     </ul>
-  </div>
-</section>
-
-<section class="home-pubs">
-  <div class="wrap" markdown="0">
+    </div>
+    <div class="home-pubs">
     <h2>Selected publications</h2>
     <ul>
       <li>
@@ -105,6 +102,7 @@ redirect_from: [/about/, /about.html]
       </li>
     </ul>
     <p class="home-more"><a href="/publications/">All publications →</a></p>
+    </div>
   </div>
 </section>
 

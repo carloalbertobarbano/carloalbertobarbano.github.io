@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Home page
+   Home and research pages
    ========================================================================== */
 
 $home-ink: #0d1224;
@@ -7,8 +7,19 @@ $home-muted: #5a6275;
 $home-accent: #4f46e5;
 $home-accent-2: #06b6d4;
 $home-line: #e6e8f0;
-$home-gutter: clamp(1.25rem, 4vw, 3.5rem);
+$home-max: 1280px;
+$home-gutter: clamp(1.25rem, 4vw, 3rem);
 $home-prose: 46rem;
+
+/* Wider site container so desktop does not fall back to the theme's 925px column */
+.masthead__inner-wrap,
+#main {
+  max-width: $home-max;
+}
+.masthead__inner-wrap {
+  padding-left: $home-gutter;
+  padding-right: $home-gutter;
+}
 
 .home {
   color: $home-ink;
@@ -18,113 +29,70 @@ $home-prose: 46rem;
   a { color: $home-accent; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  section { padding: 3.5rem $home-gutter; }
+  section { padding: 2.5rem 0; }
+  .wrap { max-width: $home-max; margin: 0 auto; padding: 0 $home-gutter; }
 
   h2 {
     font-size: 0.8rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: $home-accent;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.25rem;
     font-weight: 700;
+    border: 0;
     &:after { display: none; }
   }
+
+  h3 { margin: 0; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.01em; }
+  h3 a { color: $home-ink; }
 }
 
+/* Hero: full-bleed background, content aligned to the container */
 .home-hero {
   background:
     radial-gradient(60rem 30rem at 85% -10%, rgba($home-accent, 0.55), transparent 60%),
     radial-gradient(40rem 25rem at 0% 110%, rgba($home-accent-2, 0.35), transparent 60%),
     $home-ink;
   color: #fff;
-  padding: 4.5rem $home-gutter;
+  padding: 1.75rem 0;
 
-  .wrap { display: flex; gap: 2.5rem; align-items: center; }
+  .wrap { display: flex; gap: 2rem; align-items: center; }
   .hero-text { flex: 1; }
   .hero-photo {
-    width: 168px; height: 168px; flex: none;
+    width: 128px; height: 128px; flex: none;
     border-radius: 50%; object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  }
-  .eyebrow {
-    margin: 0 0 0.75rem;
-    font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   }
   h1 {
-    margin: 0 0 1.25rem;
-    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     line-height: 1.1; font-weight: 800; letter-spacing: -0.02em;
     color: #fff;
   }
-  .lede { margin: 0 0 1.75rem; font-size: 1.15rem; color: rgba(255, 255, 255, 0.85); max-width: 34rem; }
+  .lede { margin: 0 0 1.1rem; font-size: 1.05rem; color: rgba(255, 255, 255, 0.85); max-width: $home-prose; }
   a { color: #c7d2fe; }
 }
 
 .home-links {
   display: flex; flex-wrap: wrap; gap: 0.6rem;
   a {
-    display: inline-block; padding: 0.45rem 1rem; border-radius: 999px;
+    display: inline-block; padding: 0.35rem 0.95rem; border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.35);
-    color: #fff; font-size: 0.9rem; font-weight: 600;
+    color: #fff; font-size: 0.88rem; font-weight: 600;
     transition: background 0.15s;
     &:hover { background: rgba(255, 255, 255, 0.15); text-decoration: none; }
     &.primary { background: #fff; color: $home-ink; border-color: #fff; }
   }
 }
 
-.home-research {
-  p { font-size: 1.1rem; }
-  .big { font-size: 1.35rem; line-height: 1.5; font-weight: 500; }
-}
-
-.home-news ul, .home-pubs ul { list-style: none; margin: 0; padding: 0; }
-.home-news li {
-  display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem;
-  padding: 0.85rem 0; border-top: 1px solid $home-line;
-  .date { color: $home-muted; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
-}
-
-.home-pubs li {
-  padding: 1.1rem 0; border-top: 1px solid $home-line;
-  .title { display: block; font-weight: 700; font-size: 1.05rem; }
-  .meta { display: block; color: $home-muted; font-size: 0.92rem; }
-  .venue { color: $home-ink; font-weight: 600; }
-  .badge {
-    display: inline-block; margin-left: 0.4rem; padding: 0 0.5rem; border-radius: 4px;
-    background: rgba($home-accent, 0.1); color: $home-accent; font-size: 0.75rem; font-weight: 700;
-  }
-}
-.home-more { margin-top: 1.25rem; font-weight: 600; }
-
-.home-timeline li {
-  padding: 0.6rem 0; border-top: 1px solid $home-line;
-  .when { display: block; color: $home-muted; font-size: 0.88rem; }
-}
-.home-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-
-@media (max-width: 700px) {
-  .home-hero .wrap { flex-direction: column; align-items: flex-start; }
-  .home-hero { padding-top: 3rem; }
-  .home-cols { grid-template-columns: 1fr; gap: 0; }
-  .home-news li { grid-template-columns: 1fr; gap: 0; }
-}
-
-.home-narrow { max-width: 1200px; margin: 0 auto; padding: 2.5rem $home-gutter 3rem; }
-
-.home h3 { margin: 0; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.01em; }
-.home h3 a { color: $home-ink; }
-
-.home-research > .wrap > p:first-of-type { margin-bottom: 2rem; max-width: $home-prose; }
-.home-research .home-more { font-weight: 400; }
-
+/* Projects */
 .project {
   border: 1px solid $home-line;
   border-radius: 12px;
-  padding: 1.5rem 1.6rem;
+  padding: 1.5rem 1.75rem;
   margin: 0 0 1.25rem;
-  p { margin: 0.6rem 0 0; }
+  p { margin: 0.5rem 0 0; }
 }
 .project--featured {
   border-color: rgba($home-accent, 0.35);
@@ -135,9 +103,11 @@ $home-prose: 46rem;
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
   color: $home-muted;
 }
-.project-figure { display: block; width: 100%; height: auto; margin: 1.1rem 0 0; border-radius: 8px; }
-.project-links {
+.project-body > p { max-width: $home-prose; }
+.project-figure { display: block; width: 100%; height: auto; margin: 1rem 0 0; border-radius: 8px; }
+.home .project-links {
   display: flex; flex-wrap: wrap; gap: 1.25rem;
+  margin-top: 1rem;
   font-weight: 600; font-size: 0.95rem;
   a:after { content: " →"; }
 }
@@ -147,11 +117,56 @@ $home-prose: 46rem;
   color: $home-muted; font-size: 0.92rem;
   strong { display: block; color: $home-ink; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.01em; }
 }
+.home-more { margin-top: 1.25rem; max-width: $home-prose; }
 
+.home .home-research { padding-top: 1.75rem; }
+.project-head .project-sub { margin: 0; color: $home-muted; }
+.project-head .project-sub + .project-tag { margin-left: auto; }
+.project--featured .project-figure {
+  max-height: max(320px, calc(100vh - 380px));
+  object-fit: contain;
+}
+
+@media (min-width: 1000px) {
+  .project--split {
+    display: grid; grid-template-columns: 2fr minmax(18rem, 1fr); column-gap: 2.5rem; align-items: center;
+    .project-stats { margin-top: 0; }
+  }
+}
+
+/* News, publications, positions */
+.home-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+.home-news ul, .home-pubs ul, .home-timeline ul { list-style: none; margin: 0; padding: 0; }
+.home-news li {
+  display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem;
+  padding: 0.85rem 0; border-top: 1px solid $home-line;
+  .date { color: $home-muted; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+}
+.home-pubs li {
+  padding: 1rem 0; border-top: 1px solid $home-line;
+  .title { display: block; font-weight: 700; font-size: 1.02rem; }
+  .meta { display: block; color: $home-muted; font-size: 0.92rem; }
+  .venue { color: $home-ink; font-weight: 600; }
+  .badge {
+    display: inline-block; margin-left: 0.4rem; padding: 0 0.5rem; border-radius: 4px;
+    background: rgba($home-accent, 0.1); color: $home-accent; font-size: 0.75rem; font-weight: 700;
+  }
+}
+.home-timeline li {
+  padding: 0.6rem 0; border-top: 1px solid $home-line;
+  .when { display: block; color: $home-muted; font-size: 0.88rem; }
+}
+.home-news li:first-child,
+.home-pubs li:first-child,
+.home-timeline li:first-child { border-top: 0; }
+
+/* Research pages */
+.home-narrow { max-width: $home-max; margin: 0 auto; padding: 2.5rem $home-gutter 3rem; }
 .page-head {
   margin-bottom: 1.5rem;
   h1 { margin: 0 0 0.5rem; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; }
-  p { margin: 0.3rem 0; color: $home-muted; font-size: 1.1rem; }
+  p { margin: 0.3rem 0; color: $home-muted; font-size: 1.1rem; max-width: $home-prose; }
   .crumb { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
   .byline { font-size: 0.95rem; }
   .project-links { margin-top: 0.8rem; font-size: 0.95rem; }
@@ -163,38 +178,16 @@ $home-prose: 46rem;
   figure { margin: 1.5rem 0; }
   figcaption { color: $home-muted; font-family: $sans-serif; font-size: 0.88rem; margin-top: 0.5rem; }
   section { padding: 0; }
-  section > p, section > ul, .page-head > p { max-width: $home-prose; }
+  section > p, section > ul { max-width: $home-prose; }
 }
 
-.project-body > p { max-width: $home-prose; }
-
-@media (min-width: 1000px) {
-  .project--featured, .project--split {
-    display: grid; grid-template-columns: minmax(18rem, 1fr) 2fr; column-gap: 2.5rem; align-items: center;
-  }
-  .project--featured .project-figure { margin-top: 0; }
-  .project--split { grid-template-columns: 2fr minmax(18rem, 1fr); }
-  .project--split .project-stats { margin-top: 0; }
+@media (max-width: 900px) {
+  .home-cols { grid-template-columns: 1fr; gap: 1rem; }
 }
-
-@media (min-width: 1100px) {
-  .home { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
-  .home > * { grid-column: 1 / -1; }
-  .home > .home-news { grid-column: 1; padding-right: 1.5rem; }
-  .home > .home-pubs { grid-column: 2; padding-left: 1.5rem; }
-}
-
 @media (max-width: 700px) {
+  .home-hero .wrap { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+  .home-hero .hero-photo { width: 96px; height: 96px; }
+  .home-news li { grid-template-columns: 1fr; gap: 0; }
   .project { padding: 1.1rem 1rem; }
-}
-
-.project--stacked {
-  .project-head .project-links { margin: 0 0 0 auto; }
-  .project-figure { margin-top: 1.25rem; }
-}
-@media (min-width: 1000px) {
-  .project--featured.project--stacked { display: block; }
-}
-@media (max-width: 700px) {
-  .project--stacked .project-head .project-links { margin: 0.4rem 0 0; width: 100%; }
+  .project-head .project-tag { margin-left: 0; }
 }

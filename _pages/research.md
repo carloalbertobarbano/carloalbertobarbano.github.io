@@ -13,16 +13,14 @@ layout: home
 
 <section>
   <article class="project project--featured" id="brainpfn">
-      <div class="project-body">
     <div class="project-head">
       <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
       <span class="project-tag">Preprint, 2026</span>
     </div>
     <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass.</p>
-    <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
-      </div>
     <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview">
-    </article>
+    <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
+  </article>
 
   <article class="project project--split" id="open-fmind">
       <div class="project-body">
