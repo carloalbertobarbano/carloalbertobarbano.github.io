@@ -128,6 +128,10 @@ $home-prose: 46rem;
 }
 
 @media (min-width: 1000px) {
+  .project--side {
+    display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem; align-items: center;
+    .project-figure { margin-top: 0; }
+  }
   .project--split {
     display: grid; grid-template-columns: 2fr minmax(18rem, 1fr); column-gap: 2.5rem; align-items: center;
     .project-stats { margin-top: 0; }

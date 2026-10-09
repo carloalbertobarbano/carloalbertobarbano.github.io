@@ -12,22 +12,6 @@ layout: home
   <p>Work from my Ph.D. at Télécom Paris and the University of Turin (2020–2023) and my postdoc in the <a href="https://eidos.di.unito.it/">EIDOS group</a> at the University of Turin (2023–2025), on deep learning for medical imaging and neuroimaging.</p>
 </header>
 
-
-<section class="theme" id="foundation-normative">
-  <div class="theme-text">
-    <h2>Foundation and normative models of brain anatomy</h2>
-    <p>Pre-training on large neuroimaging datasets to learn brain representations that transfer to many downstream tasks, and modelling the healthy population to detect deviations from it.</p>
-    <ul class="theme-items">
-      <li><strong>AnatCL.</strong> An open-source foundation model for anatomical brain MRI, trained with contrastive learning guided by anatomical features and age, and evaluated on many downstream phenotyping tasks.
-        <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a>, Pattern Recognition Letters 2025</span></li>
-      <li><strong>Normative modelling of brain anatomy</strong> for unsupervised anomaly detection, with a conditional diffusion model.</li>
-      <li><strong>Normative modelling of brain development</strong> with brain age prediction and generative models.</li>
-    </ul>
-  </div>
-  <img class="theme-figure" src="/images/research/earlier-3.jpg" alt="AnatCL, normative modelling of brain anatomy, and brain ageing trajectories">
-</section>
-
-
 <section class="theme" id="contrastive-learning">
   <div class="theme-text">
     <h2>Contrastive representation learning</h2>

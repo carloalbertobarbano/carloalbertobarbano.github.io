@@ -51,7 +51,7 @@ redirect_from: [/about/, /about.html]
       </ul>
     </article>
 
-    <p class="home-more"><a href="/research/earlier-work/">Earlier work</a> covered contrastive learning, debiasing, and foundation models for anatomical MRI. If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>
+    <p class="home-more"><a href="/research/earlier-work/">Earlier work</a> covered contrastive learning and debiasing. If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>
   </div>
 </section>
 
