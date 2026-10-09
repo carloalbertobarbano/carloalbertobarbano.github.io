@@ -10,7 +10,7 @@ redirect_from: [/about/, /about.html]
     <img class="hero-photo" src="/images/profile-hero.jpg" alt="Carlo Alberto Barbano">
     <div class="hero-text">
       <h1>Carlo Alberto Barbano</h1>
-      <p class="lede">I am a Starting Researcher in the <a href="https://team.inria.fr/mind/">MIND</a> team at Inria Saclay, working with on foundation models for fMRI and brain–behaviour prediction.</p>
+      <p class="lede">I am a Starting Researcher in the <a href="https://team.inria.fr/mind/">MIND</a> team at Inria Saclay, working on foundation models for fMRI and brain–behaviour prediction.</p>
       <nav class="home-links">
         <a href="mailto:carlo.barbano@inria.fr">Contact</a>
         <a href="{{ site.author.googlescholar }}">Google Scholar</a>
