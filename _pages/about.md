@@ -7,6 +7,7 @@ redirect_from: [/about/, /about.html]
 
 <header class="home-hero">
   <div class="wrap">
+    <img class="hero-photo" src="/images/profile-hero.jpg" alt="Carlo Alberto Barbano">
     <div class="hero-text">
       <h1>Carlo Alberto Barbano</h1>
       <p class="lede">Starting Researcher at Inria Saclay, in the <a href="https://team.inria.fr/mind/">MIND</a> team. I work on foundation models for fMRI.</p>
@@ -17,7 +18,6 @@ redirect_from: [/about/, /about.html]
         <a href="{{ site.author.orcid }}">ORCID</a>
       </nav>
     </div>
-    <img class="hero-photo" src="/images/profile-hero.jpg" alt="Carlo Alberto Barbano">
   </div>
 </header>
 

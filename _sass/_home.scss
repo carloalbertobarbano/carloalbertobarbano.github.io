@@ -104,7 +104,7 @@ $home-line: #e6e8f0;
 .home-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
 
 @media (max-width: 700px) {
-  .home-hero .wrap { flex-direction: column-reverse; align-items: flex-start; }
+  .home-hero .wrap { flex-direction: column; align-items: flex-start; }
   .home-hero { padding-top: 3rem; }
   .home-cols { grid-template-columns: 1fr; gap: 0; }
   .home-news li { grid-template-columns: 1fr; gap: 0; }
