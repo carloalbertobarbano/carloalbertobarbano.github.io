@@ -219,3 +219,11 @@ $home-prose: 46rem;
 }
 
 .figure--narrow { max-width: 560px; }
+
+.project--media {
+  display: grid; grid-template-columns: 1fr minmax(12rem, 18rem); column-gap: 2.5rem; align-items: center;
+  .project-media { display: block; width: 100%; height: auto; border-radius: 8px; }
+}
+@media (max-width: 700px) {
+  .project--media { grid-template-columns: 1fr; row-gap: 1rem; .project-media { max-width: 18rem; } }
+}
