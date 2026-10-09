@@ -59,7 +59,7 @@ layout: home
   <article class="project" id="earlier">
     <div class="project-head"><h3><a href="/research/earlier-work/">Earlier work</a></h3><span class="project-tag">2020–2025</span></div>
     <p>Contrastive representation learning, debiasing, and medical imaging applications.</p>
-    <p class="project-links"><a href="/research/earlier-work/">Details</a><a href="/publications/">Publications</a></p>
+    <p class="project-links"><a href="/research/earlier-work/">Details</a><a href="{{ site.author.googlescholar }}">Publications</a></p>
   </article>
 </section>
 

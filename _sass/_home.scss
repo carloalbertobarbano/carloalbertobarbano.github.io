@@ -7,6 +7,7 @@ $home-muted: #5a6275;
 $home-accent: #4f46e5;
 $home-accent-2: #06b6d4;
 $home-line: #e6e8f0;
+$home-heading: #0e7490;
 $home-max: 1280px;
 $home-gutter: clamp(1.25rem, 4vw, 3rem);
 $home-prose: 46rem;
@@ -36,7 +37,7 @@ $home-prose: 46rem;
     font-size: 0.8rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: $home-accent;
+    color: $home-heading;
     margin: 0 0 1.25rem;
     font-weight: 700;
     border: 0;
@@ -227,3 +228,5 @@ $home-prose: 46rem;
 @media (max-width: 700px) {
   .project--media { grid-template-columns: 1fr; row-gap: 1rem; .project-media { max-width: 18rem; } }
 }
+
+.home-side > div + div { margin-top: 2.75rem; }

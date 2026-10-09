@@ -68,15 +68,32 @@ redirect_from: [/about/, /about.html]
 
 <section class="home-updates">
   <div class="wrap home-cols" markdown="0">
-    <div class="home-news">
-    <h2>News</h2>
-    <ul>
-      <li><span class="date">Sep. 2026</span><span><a href="https://inria.hal.science/hal-05767107">BrainPFN</a> preprint is out.</span></li>
-      <li><span class="date">Nov. 2025</span><span>I am now a <strong>Starting Researcher</strong> at <a href="https://team.inria.fr/mind/">Inria Saclay, MIND team</a>.</span></li>
-      <li><span class="date">Jan. 2025</span><span>Visiting Researcher at <a href="https://team.inria.fr/mind/">Inria MIND</a>, studying the link between functional connectivity and cognition with contrastive learning.</span></li>
-      <li><span class="date">Dec. 2024</span><span>Became a member of the <a href="https://ellis.eu/">ELLIS Society</a>.</span></li>
-      <li><span class="date">Mar. 2024</span><span>Member of the newborn <a href="https://www.aslto3.piemonte.it/azienda/progetti/progetti-aziendali/aslto3-radiomics-lab/">ASL TO3 Radiomics Lab</a> in Rivoli, Italy.</span></li>
-    </ul>
+    <div class="home-side">
+      <div class="home-news">
+      <h2>News</h2>
+      <ul>
+        <li><span class="date">Sep. 2026</span><span><a href="https://inria.hal.science/hal-05767107">BrainPFN</a> preprint is out.</span></li>
+        <li><span class="date">Nov. 2025</span><span>I am now a <strong>Starting Researcher</strong> at <a href="https://team.inria.fr/mind/">Inria Saclay, MIND team</a>.</span></li>
+        <li><span class="date">Jan. 2025</span><span>Visiting Researcher at <a href="https://team.inria.fr/mind/">Inria MIND</a>, studying the link between functional connectivity and cognition with contrastive learning.</span></li>
+        <li><span class="date">Dec. 2024</span><span>Became a member of the <a href="https://ellis.eu/">ELLIS Society</a>.</span></li>
+        <li><span class="date">Mar. 2024</span><span>Member of the newborn <a href="https://www.aslto3.piemonte.it/azienda/progetti/progetti-aziendali/aslto3-radiomics-lab/">ASL TO3 Radiomics Lab</a> in Rivoli, Italy.</span></li>
+      </ul>
+      </div>
+      <div class="home-timeline">
+        <h2>Positions</h2>
+        <ul>
+          <li><span class="when">Nov. 2025 – now</span><strong>Starting Researcher</strong>, <a href="https://team.inria.fr/mind/">Inria Saclay, MIND</a></li>
+          <li><span class="when">Jan. – Feb. 2025</span><strong>Visiting Researcher</strong>, <a href="https://team.inria.fr/mind/">Inria MIND</a></li>
+          <li><span class="when">Dec. 2023 – Oct. 2025</span><strong>Postdoctoral Researcher</strong>, deep learning for medical imaging, <a href="https://www.unito.it">University of Turin</a></li>
+        </ul>
+      </div>
+      <div class="home-timeline">
+        <h2>Education</h2>
+        <ul>
+          <li><span class="when">2020 – 2023</span><strong>Ph.D. in Computer Science</strong>, <a href="https://www.telecom-paris.fr/en/home">Télécom Paris</a> and <a href="https://www.unito.it">University of Turin</a> (cotutelle). Thesis: <em>Collateral-Free Learning of Deep Representations: From Natural Images to Biomedical Applications</em></li>
+          <li><span class="when">2018 – 2020</span><strong>M.Sc. in Artificial Intelligence</strong>, University of Turin</li>
+        </ul>
+      </div>
     </div>
     <div class="home-pubs">
     <h2>Selected publications</h2>
@@ -112,27 +129,7 @@ redirect_from: [/about/, /about.html]
         <span class="meta"><span class="venue">CVPR</span>, 2021</span>
       </li>
     </ul>
-    <p class="home-more"><a href="/publications/">All publications →</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="home-about">
-  <div class="wrap home-cols" markdown="0">
-    <div class="home-timeline">
-      <h2>Positions</h2>
-      <ul>
-        <li><span class="when">Nov. 2025 – now</span><strong>Starting Researcher</strong>, <a href="https://team.inria.fr/mind/">Inria Saclay, MIND</a></li>
-        <li><span class="when">Jan. – Feb. 2025</span><strong>Visiting Researcher</strong>, <a href="https://team.inria.fr/mind/">Inria MIND</a></li>
-        <li><span class="when">Dec. 2023 – Oct. 2025</span><strong>Postdoctoral Researcher</strong>, deep learning for medical imaging, <a href="https://www.unito.it">University of Turin</a></li>
-      </ul>
-    </div>
-    <div class="home-timeline">
-      <h2>Education</h2>
-      <ul>
-        <li><span class="when">2020 – 2023</span><strong>Ph.D. in Computer Science</strong>, <a href="https://www.telecom-paris.fr/en/home">Télécom Paris</a> and <a href="https://www.unito.it">University of Turin</a> (cotutelle). Thesis: <em>Collateral-Free Learning of Deep Representations: From Natural Images to Biomedical Applications</em></li>
-        <li><span class="when">2018 – 2020</span><strong>M.Sc. in Artificial Intelligence</strong>, University of Turin</li>
-      </ul>
+    <p class="home-more"><a href="{{ site.author.googlescholar }}">All publications on Google Scholar →</a></p>
     </div>
   </div>
 </section>
