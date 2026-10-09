@@ -26,15 +26,13 @@ redirect_from: [/about/, /about.html]
     <h2>Research</h2>
     <p>I work with <a href="https://pages.saclay.inria.fr/demian.wassermann/">Demian Wassermann</a> in the <a href="https://team.inria.fr/mind/">MIND</a> team on foundation models for fMRI and on predicting behaviour from brain activity. Earlier work covered contrastive learning, debiasing, and foundation models for anatomical MRI.</p>
 
-    <article class="project project--featured">
-      <div class="project-body">
+    <article class="project project--featured project--stacked">
       <div class="project-head">
         <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
         <span class="project-tag">Preprint, 2026</span>
+        <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
       </div>
-      <p>A Prior-Data Fitted Network for brain–behaviour prediction. Meta-trained on synthetic tasks built from ~7.7k real FC matrices, it predicts behavioural scores from a small labelled context in a single forward pass, without refitting.</p>
-      <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
-      </div>
+      <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks.</p>
       <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview: real connectomes, sampled mechanisms, meta-training a transformer, prediction on new data">
     </article>
 

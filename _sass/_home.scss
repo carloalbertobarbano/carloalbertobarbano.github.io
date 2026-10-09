@@ -187,3 +187,14 @@ $home-prose: 46rem;
 @media (max-width: 700px) {
   .project { padding: 1.1rem 1rem; }
 }
+
+.project--stacked {
+  .project-head .project-links { margin: 0 0 0 auto; }
+  .project-figure { margin-top: 1.25rem; }
+}
+@media (min-width: 1000px) {
+  .project--featured.project--stacked { display: block; }
+}
+@media (max-width: 700px) {
+  .project--stacked .project-head .project-links { margin: 0.4rem 0 0; width: 100%; }
+}
