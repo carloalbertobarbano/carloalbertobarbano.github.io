@@ -46,7 +46,12 @@ The pre-trained encoder is frozen and evaluated with linear probing on 12 downst
 
 ## Independent evaluation: cross-scanner reliability
 
-An independent study by <a href="https://www.medrxiv.org/content/10.64898/2026.03.23.26348808v2">Navarro-González et al.</a> (medRxiv, 2026) measured how stable brain MRI foundation model embeddings are across scanners, using a travelling-heads dataset (20 participants, 8 scanners, 3 vendors). AnatCL had the highest cross-scanner reliability of the models tested (ICC 0.97), above the FreeSurfer morphometric baseline (0.93), y-Aware (0.81), and purely self-supervised models (0.25–0.45). Its representations are therefore the least affected by scanner and site.
+An independent study by <a href="https://www.medrxiv.org/content/10.64898/2026.03.23.26348808v2">Navarro-González et al.</a> (medRxiv preprint, 2026) measured how stable the embeddings of five brain MRI foundation models are when the same people are scanned on different scanners, using the ON-Harmony travelling-heads dataset (20 participants, 8 scanners, 3 vendors). AnatCL had the highest between-scanner reliability (median ICC 0.97), above the FreeSurfer morphometric baseline (0.93), y-Aware (0.81), and the purely self-supervised models (0.25–0.45). It also had the smallest gap between within-scanner and between-scanner reliability, and always matched the correct subject across scanners.
+
+<figure>
+  <img class="project-figure figure--narrow" src="/images/research/anatcl-cross-scanner.png" alt="Violin plots of between-scanner ICC for FreeSurfer, AnatCL, y-Aware, BrainIAC, BrainSegFounder and 3D-SimCLR">
+  <figcaption>Between-scanner reliability (ICC) of each model's embedding dimensions. Figure 1 from Navarro-González et al., 2026 (CC BY 4.0).</figcaption>
+</figure>
 
 ## Code
 
