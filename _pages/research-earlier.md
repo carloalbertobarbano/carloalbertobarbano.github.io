@@ -25,10 +25,10 @@ layout: home
         <span class="ref"><a href="https://proceedings.mlr.press/v202/dufumier23a.html">Integrating Prior Knowledge in Contrastive Learning with Kernel</a>, ICML 2023</span></li>
     </ul>
   </div>
-  <img class="theme-figure theme-figure--tall" src="/images/research/earlier-1.jpg" alt="ε-SupInfoNCE metric constraints and contrastive learning for regression">
+  <img class="theme-figure" src="/images/research/earlier-1.jpg" alt="ε-SupInfoNCE metric constraints and contrastive learning for regression">
 </section>
 
-<section class="theme" id="debiasing">
+<section class="theme theme--wide" id="debiasing">
   <div class="theme-text">
     <h2>Collateral learning and debiasing</h2>
     <p>Training data often contain spurious correlations, or biases, that a model can learn instead of the intended task. I worked on methods to learn representations that do not rely on these biases, with and without bias labels.</p>
@@ -43,10 +43,10 @@ layout: home
         <span class="ref"><a href="https://openaccess.thecvf.com/content/ICCV2021W/RPRMI/html/Barbano_Bridging_the_Gap_Between_Debiasing_and_Privacy_for_Deep_Learning_ICCVW_2021_paper.html">Bridging the gap between debiasing and privacy for deep learning</a>, ICCV Workshops 2021</span></li>
     </ul>
   </div>
-  <img class="theme-figure theme-figure--tall" src="/images/research/earlier-2.jpg" alt="EnD, FairKL and unsupervised debiasing">
+  <img class="theme-figure" src="/images/research/earlier-2.jpg" alt="EnD, FairKL and unsupervised debiasing">
 </section>
 
-<section class="theme theme--wide" id="foundation-normative">
+<section class="theme" id="foundation-normative">
   <div class="theme-text">
     <h2>Foundation and normative models of brain anatomy</h2>
     <p>Pre-training on large neuroimaging datasets to learn brain representations that transfer to many downstream tasks, and modelling the healthy population to detect deviations from it.</p>
