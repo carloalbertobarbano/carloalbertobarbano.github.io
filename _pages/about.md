@@ -27,27 +27,31 @@ redirect_from: [/about/, /about.html]
     <p>I work with <a href="https://pages.saclay.inria.fr/demian.wassermann/">Demian Wassermann</a> in the <a href="https://team.inria.fr/mind/">MIND</a> team on foundation models for fMRI and on predicting behaviour from brain activity. Earlier work covered contrastive learning, debiasing, and foundation models for anatomical MRI.</p>
 
     <article class="project project--featured">
+      <div class="project-body">
       <div class="project-head">
         <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
         <span class="project-tag">Preprint, 2026</span>
       </div>
       <p>A Prior-Data Fitted Network for brain–behaviour prediction. Meta-trained on synthetic tasks built from ~7.7k real FC matrices, it predicts behavioural scores from a small labelled context in a single forward pass, without refitting.</p>
-      <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview: real connectomes, sampled mechanisms, meta-training a transformer, prediction on new data">
       <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
+      </div>
+      <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview: real connectomes, sampled mechanisms, meta-training a transformer, prediction on new data">
     </article>
 
-    <article class="project">
+    <article class="project project--split">
+      <div class="project-body">
       <div class="project-head">
         <h3><a href="/research/#open-fmind">Open-fMIND</a></h3>
         <span class="project-tag">Coming soon</span>
       </div>
       <p>An open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and FC matrices for several atlases.</p>
+      <p class="project-links"><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></p>
+      </div>
       <ul class="project-stats">
         <li><strong>14,016</strong> subjects</li>
         <li><strong>52,505</strong> functional runs</li>
         <li><strong>52</strong> atlases</li>
       </ul>
-      <p class="project-links"><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></p>
     </article>
 
     <p class="home-more">If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>

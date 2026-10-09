@@ -7,6 +7,8 @@ $home-muted: #5a6275;
 $home-accent: #4f46e5;
 $home-accent-2: #06b6d4;
 $home-line: #e6e8f0;
+$home-gutter: clamp(1.25rem, 4vw, 3.5rem);
+$home-prose: 46rem;
 
 .home {
   color: $home-ink;
@@ -16,8 +18,7 @@ $home-line: #e6e8f0;
   a { color: $home-accent; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  section { padding: 3.5rem 1.25rem; }
-  .wrap { max-width: 760px; margin: 0 auto; }
+  section { padding: 3.5rem $home-gutter; }
 
   h2 {
     font-size: 0.8rem;
@@ -36,7 +37,7 @@ $home-line: #e6e8f0;
     radial-gradient(40rem 25rem at 0% 110%, rgba($home-accent-2, 0.35), transparent 60%),
     $home-ink;
   color: #fff;
-  padding: 5rem 1.25rem 4.5rem;
+  padding: 4.5rem $home-gutter;
 
   .wrap { display: flex; gap: 2.5rem; align-items: center; }
   .hero-text { flex: 1; }
@@ -110,12 +111,12 @@ $home-line: #e6e8f0;
   .home-news li { grid-template-columns: 1fr; gap: 0; }
 }
 
-.home-narrow { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+.home-narrow { max-width: 1200px; margin: 0 auto; padding: 2.5rem $home-gutter 3rem; }
 
 .home h3 { margin: 0; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.01em; }
 .home h3 a { color: $home-ink; }
 
-.home-research > .wrap > p:first-of-type { margin-bottom: 2rem; }
+.home-research > .wrap > p:first-of-type { margin-bottom: 2rem; max-width: $home-prose; }
 .home-research .home-more { font-weight: 400; }
 
 .project {
@@ -162,4 +163,27 @@ $home-line: #e6e8f0;
   figure { margin: 1.5rem 0; }
   figcaption { color: $home-muted; font-family: $sans-serif; font-size: 0.88rem; margin-top: 0.5rem; }
   section { padding: 0; }
+  section > p, section > ul, .page-head > p { max-width: $home-prose; }
+}
+
+.project-body > p { max-width: $home-prose; }
+
+@media (min-width: 1000px) {
+  .project--featured, .project--split {
+    display: grid; grid-template-columns: minmax(18rem, 1fr) 2fr; column-gap: 2.5rem; align-items: center;
+  }
+  .project--featured .project-figure { margin-top: 0; }
+  .project--split { grid-template-columns: 2fr minmax(18rem, 1fr); }
+  .project--split .project-stats { margin-top: 0; }
+}
+
+@media (min-width: 1100px) {
+  .home { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+  .home > * { grid-column: 1 / -1; }
+  .home > .home-news { grid-column: 1; padding-right: 1.5rem; }
+  .home > .home-pubs { grid-column: 2; padding-left: 1.5rem; }
+}
+
+@media (max-width: 700px) {
+  .project { padding: 1.1rem 1rem; }
 }
