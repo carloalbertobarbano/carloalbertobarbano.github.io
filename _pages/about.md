@@ -2,27 +2,17 @@
 permalink: /
 title: "Carlo Alberto Barbano"
 layout: home
+author_profile: true
 redirect_from: [/about/, /about.html]
 ---
 
 <header class="home-hero">
-  <div class="wrap">
-    <div class="hero-text">
-      <h1>Carlo Alberto Barbano</h1>
-      <p class="lede">Starting Researcher at Inria Saclay, in the <a href="https://team.inria.fr/mind/">MIND</a> team. I work on foundation models for fMRI.</p>
-      <nav class="home-links">
-        <a class="primary" href="mailto:carlo.barbano@inria.fr">Contact</a>
-        <a href="{{ site.author.googlescholar }}">Google Scholar</a>
-        <a href="https://github.com/{{ site.author.github }}">GitHub</a>
-        <a href="{{ site.author.orcid }}">ORCID</a>
-      </nav>
-    </div>
-    <img class="hero-photo" src="/images/profile-hero.jpg" alt="Carlo Alberto Barbano">
-  </div>
+  <h1>Starting Researcher at Inria Saclay, in the <a href="https://team.inria.fr/mind/">MIND</a> team. I work on foundation models for fMRI.</h1>
+  <a class="btn-contact" href="mailto:carlo.barbano@inria.fr">Contact</a>
 </header>
 
 <section class="home-research">
-  <div class="wrap" markdown="1">
+  <div markdown="1">
 
 ## Research
 
@@ -36,7 +26,7 @@ If you are interested in collaborating, do not hesitate to [contact me](mailto:c
 </section>
 
 <section class="home-news">
-  <div class="wrap" markdown="0">
+  <div>
     <h2>News</h2>
     <ul>
       <li><span class="date">Nov. 2025</span><span>I am now a <strong>Starting Researcher</strong> at <a href="https://team.inria.fr/mind/">Inria Saclay, MIND team</a>.</span></li>
@@ -48,7 +38,7 @@ If you are interested in collaborating, do not hesitate to [contact me](mailto:c
 </section>
 
 <section class="home-pubs">
-  <div class="wrap" markdown="0">
+  <div>
     <h2>Selected publications</h2>
     <ul>
       <li>
@@ -82,7 +72,7 @@ If you are interested in collaborating, do not hesitate to [contact me](mailto:c
 </section>
 
 <section class="home-about">
-  <div class="wrap home-cols" markdown="0">
+  <div class="home-cols">
     <div class="home-timeline">
       <h2>Positions</h2>
       <ul>
