@@ -75,14 +75,15 @@ $home-prose: 46rem;
 }
 
 .home-links {
-  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  font-size: 0.95rem; font-weight: 600;
   a {
-    display: inline-block; padding: 0.35rem 0.95rem; border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: #fff; font-size: 0.88rem; font-weight: 600;
-    transition: background 0.15s;
-    &:hover { background: rgba(255, 255, 255, 0.15); text-decoration: none; }
-    &.primary { background: #fff; color: $home-ink; border-color: #fff; }
+    color: #fff;
+    &:hover { color: #c7d2fe; text-decoration: underline; }
+  }
+  a + a:before {
+    content: "·"; display: inline-block; margin: 0 0.6rem;
+    color: rgba(255, 255, 255, 0.5); font-weight: 400;
   }
 }
 
