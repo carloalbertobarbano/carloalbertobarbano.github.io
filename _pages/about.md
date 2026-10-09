@@ -51,6 +51,14 @@ redirect_from: [/about/, /about.html]
       </ul>
     </article>
 
+    <article class="project">
+      <div class="project-head">
+        <h3><a href="/research/#brain-anatomy">Foundation and normative models of brain anatomy</a></h3>
+      </div>
+      <p>AnatCL, a foundation model for anatomical brain MRI, normative models for anomaly detection, and models of brain and disease development.</p>
+      <p class="project-links"><a href="/research/anatcl/">AnatCL</a><a href="/research/#brain-anatomy">More</a></p>
+    </article>
+
     <p class="home-more"><a href="/research/earlier-work/">Earlier work</a> covered contrastive learning and debiasing. If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>
   </div>
 </section>

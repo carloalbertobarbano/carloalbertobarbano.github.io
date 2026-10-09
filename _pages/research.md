@@ -40,22 +40,20 @@ layout: home
     </ul>
     </article>
 
-  <article class="project project--side" id="brain-anatomy">
-    <div class="project-body">
-      <div class="project-head">
-        <h3>Foundation and normative models of brain anatomy</h3>
-      </div>
-      <p>Pre-training on large anatomical MRI datasets to learn brain representations that transfer to many downstream tasks, and modelling the healthy population to detect and follow deviations from it.</p>
-      <ul class="theme-items">
-        <li><strong>AnatCL.</strong> An open-source foundation model for anatomical brain MRI, trained with contrastive learning guided by anatomical features and age, and evaluated on many downstream phenotyping tasks.
-          <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a>, Pattern Recognition Letters 2025</span></li>
-        <li><strong>Normative modelling of brain anatomy</strong> for unsupervised anomaly detection, with a conditional diffusion model.
-          <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S016786552500371X">Unsupervised contrastive analysis for anomaly detection in brain MRIs via conditional diffusion models</a>, Pattern Recognition Letters 2026</span></li>
-        <li><strong>Modelling brain and disease development</strong> from longitudinal and multimodal brain imaging, with brain age prediction and generative models.
-          <span class="ref">With Akshita Kumar, Ph.D. student co-supervised with Pietro Gori · <a href="https://theses.fr/s428919">Thesis</a></span></li>
-      </ul>
+  <article class="project" id="brain-anatomy">
+    <div class="project-head">
+      <h3>Foundation and normative models of brain anatomy</h3>
     </div>
-    <img class="project-figure" src="/images/research/brain-anatomy.jpg" alt="AnatCL, normative modelling of brain anatomy for anomaly detection, and brain ageing trajectories">
+    <p>Pre-training on large anatomical MRI datasets to learn brain representations that transfer to many downstream tasks, and modelling the healthy population to detect and follow deviations from it.</p>
+    <img class="project-figure" src="/images/research/anatcl.svg" alt="AnatCL overview: anatomical MRIs, anatomical similarity, contrastive pre-training, linear probing">
+    <ul class="theme-items">
+      <li><strong><a href="/research/anatcl/">AnatCL</a>.</strong> An open-source foundation model for anatomical brain MRI, trained with contrastive learning guided by anatomical features and age. An independent benchmark found it has the most scanner-invariant representations among the models tested.
+        <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a>, Pattern Recognition Letters 2025 · <a href="/research/anatcl/">Details</a></span></li>
+      <li><strong>Normative modelling of brain anatomy</strong> for unsupervised anomaly detection, with a conditional diffusion model.
+        <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S016786552500371X">Unsupervised contrastive analysis for anomaly detection in brain MRIs via conditional diffusion models</a>, Pattern Recognition Letters 2026</span></li>
+      <li><strong>Modelling brain and disease development</strong> from longitudinal and multimodal brain imaging, with brain age prediction and generative models.
+        <span class="ref">With Akshita Kumar, Ph.D. student co-supervised with Pietro Gori · <a href="https://theses.fr/s428919">Thesis</a></span></li>
+    </ul>
   </article>
 
   <article class="project" id="earlier">

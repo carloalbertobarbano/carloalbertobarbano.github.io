@@ -216,3 +216,5 @@ $home-prose: 46rem;
 @media (max-width: 900px) {
   .home-narrow .theme { grid-template-columns: 1fr; }
 }
+
+.figure--narrow { max-width: 560px; }
