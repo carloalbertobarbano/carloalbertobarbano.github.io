@@ -20,7 +20,7 @@ layout: home
       <li><strong>ε-SupInfoNCE.</strong> A generalization of InfoNCE through metric constraints between positive and negative distances.
         <span class="ref"><a href="https://openreview.net/forum?id=Ph5cJSfD2XN">Unbiased Supervised Contrastive Learning</a>, ICLR 2023</span></li>
       <li><strong>Contrastive learning for regression.</strong> Alignment and repulsion weighted by continuous targets instead of binary positives and negatives, applied to multi-site brain age prediction.
-        <span class="ref"><a href="https://arxiv.org/abs/2211.08326">Contrastive learning for regression in multi-site brain age prediction</a>, ISBI 2023 (best poster award)</span></li>
+        <span class="ref"><a href="https://arxiv.org/abs/2211.08326">Contrastive learning for regression in multi-site brain age prediction</a>, ISBI 2023 (best poster award) · extended in <a href="https://doi.org/10.1016/j.patrec.2026.02.032">Pattern Recognition Letters 2026</a></span></li>
       <li><strong>Prior knowledge with kernels.</strong> Integrating prior information into contrastive learning through kernels.
         <span class="ref"><a href="https://proceedings.mlr.press/v202/dufumier23a.html">Integrating Prior Knowledge in Contrastive Learning with Kernel</a>, ICML 2023</span></li>
     </ul>

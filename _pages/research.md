@@ -49,6 +49,8 @@ layout: home
     <ul class="theme-items">
       <li><strong><a href="/research/anatcl/">AnatCL</a>.</strong> An open-source foundation model for anatomical brain MRI, trained with contrastive learning guided by anatomical features and age. In an independent travelling-heads benchmark, its representations were the most reliable across scanners among the models tested.
         <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a>, Pattern Recognition Letters 2026 · <a href="/research/anatcl/">Details</a></span></li>
+      <li><strong>Robust brain age estimation</strong> with contrastive learning. An extension of our ISBI 2023 work to over 20,000 T1 scans from four public datasets, studying generalization to unseen sites, robustness to site effects, and accelerated ageing in cognitive impairment and Alzheimer's disease.
+        <span class="ref"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a>, Pattern Recognition Letters 2026</span></li>
       <li><strong>Normative modelling of brain anatomy</strong> for unsupervised anomaly detection, with a conditional diffusion model.
         <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S016786552500371X">Unsupervised contrastive analysis for anomaly detection in brain MRIs via conditional diffusion models</a>, Pattern Recognition Letters 2026</span></li>
       <li><strong>Modelling brain and disease development</strong> from longitudinal and multimodal brain imaging, with brain age prediction and generative models.
