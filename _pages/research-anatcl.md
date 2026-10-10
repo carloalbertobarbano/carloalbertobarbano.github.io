@@ -56,7 +56,7 @@ An independent study by <a href="https://www.medrxiv.org/content/10.64898/2026.0
 
 ## Code
 
-Code and pre-trained models are available on [GitHub](https://github.com/EIDOSLAB/AnatCL).
+Code and pre-trained models are available on [GitHub](https://github.com/EIDOSLAB/AnatCL), and as a Python package: `pip install anatcl`.
 
 </section>
 

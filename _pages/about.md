@@ -30,11 +30,10 @@ redirect_from: [/about/, /about.html]
       <img class="project-media" src="/images/research/brainpfn-card.svg" alt="BrainPFN: from fMRI to connectivity, sampled brain–behaviour mechanisms, meta-training, and prediction on new data">
       <div class="project-body">
         <div class="project-head">
-          <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
-          <span class="project-tag">Preprint, 2026</span>
+          <h3><a href="/research/#fmri">Foundation models for fMRI</a></h3>
         </div>
-        <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic tasks built from real FC matrices predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI.</p>
-        <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a><a href="/research/#fmri">More</a></p>
+        <p>BrainPFN, a transformer meta-trained on synthetic tasks built from real functional connectivity (FC) matrices, predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI. Related work covers pretraining targets derived from FC and self-supervised learning from raw fMRI time series.</p>
+        <p class="project-links"><a href="/research/brainpfn/">BrainPFN</a><a href="https://inria.hal.science/hal-05767107">BrainPFN preprint</a><a href="/research/#fmri">More</a></p>
       </div>
     </article>
 
@@ -60,12 +59,30 @@ redirect_from: [/about/, /about.html]
           <h3><a href="/research/#brain-anatomy">Foundation and normative models of brain anatomy</a></h3>
         </div>
         <p>AnatCL, a foundation model for anatomical brain MRI, normative models for anomaly detection, and models of brain and disease development.</p>
-        <p class="project-links"><a href="/research/anatcl/">AnatCL</a><a href="/research/#brain-anatomy">More</a></p>
+        <p class="project-links"><a href="/research/anatcl/">AnatCL</a><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">AnatCL paper</a><a href="/research/#brain-anatomy">More</a></p>
       </div>
       <img class="project-media" src="/images/research/anatcl-card.svg" alt="AnatCL: anatomical MRI, morphological descriptors and contrastive pre-training">
     </article>
 
     <p class="home-more"><a href="/research/earlier-work/">Earlier work</a> covered contrastive learning and debiasing. If you are interested in collaborating, <a href="mailto:carlo.barbano@inria.fr">contact me</a>.</p>
+  </div>
+</section>
+
+<section class="home-resources">
+  <div class="wrap" markdown="0">
+    <div class="resources-box">
+      <h2>Software and data</h2>
+      <ul>
+        <li><a href="https://github.com/EIDOSLAB/torchstain">torchstain</a>
+          <span>Stain normalization and augmentation for histopathology images, on GPU, with PyTorch, TensorFlow and NumPy backends. I maintain it. <code>pip install torchstain</code></span></li>
+        <li><a href="https://github.com/EIDOSLAB/AnatCL">AnatCL</a>
+          <span>Code and pre-trained weights for the AnatCL brain MRI models. <code>pip install anatcl</code></span></li>
+        <li><a href="https://github.com/EIDOSLAB/simplify">Simplify</a>
+          <span>Removes the zeroed-out parts of a pruned PyTorch model, so that it actually runs faster. <code>pip install torch-simplify</code></span></li>
+        <li><a href="https://github.com/EIDOSLAB/UNITOPATHO">UniToPatho</a>
+          <span>9,536 H&amp;E patches of colorectal polyps, labelled by polyp type and adenoma dysplasia grade.</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -98,6 +115,12 @@ redirect_from: [/about/, /about.html]
           <li><span class="when">2018 – 2020</span><strong>M.Sc. in Artificial Intelligence</strong>, University of Turin</li>
         </ul>
       </div>
+      <div class="home-timeline">
+        <h2>Supervision</h2>
+        <ul>
+          <li><span class="when">Feb. 2026 – now</span><strong>Akshita Kumar</strong>, Ph.D. student, Institut Polytechnique de Paris, co-supervised with Pietro Gori. Self-supervised learning for longitudinal and multimodal brain imaging · <a href="https://theses.fr/s428919">Thesis</a></li>
+        </ul>
+      </div>
     </div>
     <div class="home-pubs">
     <h2>Selected publications</h2>
@@ -110,6 +133,11 @@ redirect_from: [/about/, /about.html]
       <li>
         <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a></span>
         <span class="meta"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto</span>
+        <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
+      </li>
+      <li>
+        <span class="title"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a></span>
+        <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, P. Gori</span>
         <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
       </li>
       <li>
