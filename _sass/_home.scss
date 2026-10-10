@@ -231,3 +231,9 @@ $home-prose: 46rem;
 }
 
 .home-side > div + div { margin-top: 2.75rem; }
+
+/* Stats nested in a theme item: no list borders or spacing */
+.home-narrow .theme-items .project-stats {
+  padding: 0; margin: 0.6rem 0 0.4rem;
+  li { border-top: 0; padding: 0; margin: 0; }
+}

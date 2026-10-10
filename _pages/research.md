@@ -22,7 +22,13 @@ layout: home
     <ul class="theme-items">
       <li id="brainpfn"><strong><a href="/research/brainpfn/">BrainPFN</a>.</strong> Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass, without refitting.
         <span class="ref"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · <a href="/research/brainpfn/">Details</a></span></li>
-      <li id="open-fmind"><strong><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases: 14,016 subjects, 52,505 functional runs, 52 atlases.
+      <li id="open-fmind"><strong><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases.
+        <ul class="project-stats">
+          <li><strong>14,016</strong> subjects</li>
+          <li><strong>52,505</strong> functional runs</li>
+          <li><strong>52</strong> atlases</li>
+          <li><strong>2.73M</strong> ROI timeseries</li>
+        </ul>
         <span class="ref">Coming soon · Joint work with G. Marraffini and D. Wassermann · <a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></span></li>
       <li id="timber"><strong>TIMBER.</strong> Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on gender classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.
         <span class="ref"><a href="https://hal.science/hal-05632181">TIMBER: Data-Efficient Self-Supervised Representation Learning for fMRI Time Series</a>, Preprint 2026 · With A. Le Bris and D. Wassermann</span></li>
