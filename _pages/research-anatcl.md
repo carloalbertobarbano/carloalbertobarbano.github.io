@@ -10,7 +10,7 @@ layout: home
   <p class="crumb"><a href="/research/">Research</a></p>
   <h1>AnatCL</h1>
   <p>Anatomical foundation models for brain MRIs.</p>
-  <p class="byline"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto · Pattern Recognition Letters, 2025</p>
+  <p class="byline"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto · Pattern Recognition Letters, 2026</p>
   <p class="project-links"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Paper</a><a href="https://github.com/EIDOSLAB/AnatCL">Code and pre-trained models</a></p>
 </header>
 

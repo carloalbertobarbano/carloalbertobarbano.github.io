@@ -1,0 +1,35 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Carlo Alberto Barbano
+
+> Starting Researcher in the MIND team at Inria Saclay (France), working on foundation models for fMRI and brain–behaviour prediction. Previously Ph.D. at Télécom Paris and the University of Turin, and postdoctoral researcher at the University of Turin.
+
+## Profile
+
+- Current position: Starting Researcher, Inria Saclay, MIND team (since November 2025)
+- Research topics: foundation models for fMRI, brain–behaviour prediction, functional connectivity, foundation and normative models of brain anatomy, contrastive representation learning, debiasing
+- Member of the ELLIS Society (since 2024); best poster award at ISBI 2023
+- Contact: carlo.barbano@inria.fr
+- Google Scholar: {{ site.author.googlescholar }}
+- ORCID: {{ site.author.orcid }}
+- GitHub: https://github.com/{{ site.author.github }}
+
+## Current projects
+
+- [BrainPFN]({{ site.url }}/research/brainpfn/): amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic tasks built from real functional connectivity matrices predicts behavioural scores for a new cohort in a single forward pass, without refitting. Preprint, 2026.
+- [Open-fMIND](https://pages.saclay.inria.fr/carlo.barbano/open-fmind/): an open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and functional connectivity matrices for several atlases (14,016 subjects, 52,505 functional runs, 52 atlases). Joint work with G. Marraffini and D. Wassermann.
+- [AnatCL]({{ site.url }}/research/anatcl/): a foundation model for anatomical brain MRI, trained with contrastive learning guided by anatomical features and age. Code and pre-trained models: https://github.com/EIDOSLAB/AnatCL
+- [Foundation and normative models of brain anatomy]({{ site.url }}/research/#brain-anatomy): normative models for unsupervised anomaly detection, and models of brain and disease development.
+
+## Pages
+
+- [Home]({{ site.url }}/): overview, news, positions and education
+- [Research]({{ site.url }}/research/): current research projects
+- [Earlier work]({{ site.url }}/research/earlier-work/): contrastive learning, debiasing and medical imaging applications (2020–2025)
+
+## Publications
+{% assign pubs = site.publications | sort: "date" | reverse %}{% for p in pubs %}
+- [{{ p.title }}]({{ p.paperurl }}). {{ p.citation | split: '. "' | first }}. {{ p.venue }}, {{ p.date | date: "%Y" }}.{% endfor %}

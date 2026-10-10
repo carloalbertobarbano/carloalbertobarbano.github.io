@@ -108,7 +108,7 @@ redirect_from: [/about/, /about.html]
       <li>
         <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a></span>
         <span class="meta"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto</span>
-        <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2025</span>
+        <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
       </li>
       <li>
         <span class="title"><a href="https://arxiv.org/abs/2211.08326">Contrastive learning for regression in multi-site brain age prediction</a><span class="badge">Best poster</span></span>
