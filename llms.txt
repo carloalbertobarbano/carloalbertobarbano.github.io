@@ -21,6 +21,7 @@ sitemap: false
 
 - [BrainPFN]({{ site.url }}/research/brainpfn/): amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic tasks built from real functional connectivity matrices predicts behavioural scores for a new cohort in a single forward pass, without refitting. Preprint, 2026.
 - [Open-fMIND](https://pages.saclay.inria.fr/carlo.barbano/open-fmind/): an open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and functional connectivity matrices for several atlases (14,016 subjects, 52,505 functional runs, 52 atlases). Joint work with G. Marraffini and D. Wassermann.
+- [TIMBER]({{ site.url }}/research/#timber): data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. Preprint, 2026. With A. Le Bris and D. Wassermann.
 - [AnatCL]({{ site.url }}/research/anatcl/): a foundation model for anatomical brain MRI, trained with contrastive learning guided by anatomical features and age. Code and pre-trained models: https://github.com/EIDOSLAB/AnatCL
 - [Foundation and normative models of brain anatomy]({{ site.url }}/research/#brain-anatomy): robust brain age estimation with contrastive learning, normative models for unsupervised anomaly detection, and models of brain and disease development.
 

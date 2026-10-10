@@ -1,5 +1,5 @@
 ---
-description: "Research of Carlo Alberto Barbano: BrainPFN, Open-fMIND, and foundation and normative models of brain anatomy."
+description: "Research of Carlo Alberto Barbano: BrainPFN, Open-fMIND, TIMBER, and foundation and normative models of brain anatomy."
 permalink: /research/
 title: "Research"
 layout: home
@@ -40,6 +40,16 @@ layout: home
       <li><strong>2.73M</strong> ROI timeseries</li>
     </ul>
     </article>
+
+  <article class="project" id="timber">
+    <div class="project-head">
+      <h3>TIMBER</h3>
+      <span class="project-tag">Preprint, 2026</span>
+    </div>
+    <p>Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. A reconstruction objective (TACO) captures temporal dependencies without explicit positional encoding. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on gender classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.</p>
+    <p>With A. Le Bris and D. Wassermann.</p>
+    <p class="project-links"><a href="https://hal.science/hal-05632181">Paper (HAL)</a></p>
+  </article>
 
   <article class="project" id="brain-anatomy">
     <div class="project-head">

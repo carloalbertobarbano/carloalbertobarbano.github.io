@@ -76,6 +76,7 @@ redirect_from: [/about/, /about.html]
       <h2>News</h2>
       <ul>
         <li><span class="date">Sep. 2026</span><span><a href="https://inria.hal.science/hal-05767107">BrainPFN</a> preprint is out.</span></li>
+        <li><span class="date">May 2026</span><span><a href="https://hal.science/hal-05632181">TIMBER</a> preprint, on self-supervised representation learning from raw fMRI time series, is out.</span></li>
         <li><span class="date">Nov. 2025</span><span>I am now a <strong>Starting Researcher</strong> at <a href="https://team.inria.fr/mind/">Inria Saclay, MIND team</a>.</span></li>
         <li><span class="date">Jan. 2025</span><span>Visiting Researcher at <a href="https://team.inria.fr/mind/">Inria MIND</a>, studying the link between functional connectivity and cognition with contrastive learning.</span></li>
         <li><span class="date">Dec. 2024</span><span>Became a member of the <a href="https://ellis.eu/">ELLIS Society</a>.</span></li>
