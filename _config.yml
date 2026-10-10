@@ -146,7 +146,9 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "goatcounter" # false, "goatcounter", "google", "google-universal", "google-analytics-4", "custom"
+  goatcounter:
+    code                 : # GoatCounter site code, i.e. <code>.goatcounter.com. Nothing is loaded while empty.
   google:
     tracking_id          :
 
