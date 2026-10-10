@@ -34,7 +34,7 @@ redirect_from: [/about/, /about.html]
           <span class="project-tag">Preprint, 2026</span>
         </div>
         <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic tasks built from real FC matrices predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI.</p>
-        <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
+        <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a><a href="/research/#fmri">More</a></p>
       </div>
     </article>
 
