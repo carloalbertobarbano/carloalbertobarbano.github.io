@@ -33,7 +33,7 @@ redirect_from: [/about/, /about.html]
           <h3><a href="/research/#fmri">Foundation models for fMRI</a></h3>
         </div>
         <p>BrainPFN, a transformer meta-trained on synthetic tasks built from real functional connectivity (FC) matrices, predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI. Related work covers pretraining targets derived from FC and self-supervised learning from raw fMRI time series.</p>
-        <p class="project-links"><a href="/research/brainpfn/">BrainPFN</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a><a href="/research/#fmri">More</a></p>
+        <p class="project-links"><a href="/research/brainpfn/">BrainPFN</a><a href="https://inria.hal.science/hal-05767107">BrainPFN preprint</a><a href="/research/#fmri">More</a></p>
       </div>
     </article>
 
