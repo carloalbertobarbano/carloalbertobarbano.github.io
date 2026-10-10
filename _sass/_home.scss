@@ -237,3 +237,23 @@ $home-prose: 46rem;
   padding: 0; margin: 0.6rem 0 0.4rem;
   li { border-top: 0; padding: 0; margin: 0; }
 }
+
+/* Software and data box */
+.home .home-resources { padding-top: 0; padding-bottom: 0.5rem; }
+.resources-box {
+  border: 1px solid rgba($home-heading, 0.45);
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  background: rgba($home-heading, 0.03);
+  h2 { margin-bottom: 0.75rem; }
+  ul {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 0.4rem 2rem;
+  }
+  li { font-size: 0.95rem; line-height: 1.5; }
+  li a { font-weight: 700; margin-right: 0.5rem; }
+  li span { color: $home-muted; }
+}
+@media (max-width: 700px) {
+  .resources-box { padding: 1.1rem 1rem; ul { grid-template-columns: 1fr; } }
+}

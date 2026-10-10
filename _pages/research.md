@@ -17,12 +17,12 @@ layout: home
     <div class="project-head">
       <h3>Foundation models for fMRI</h3>
     </div>
-    <p>Models of brain function trained on large collections of fMRI data and transferred to new cohorts and tasks, such as predicting behaviour from functional connectivity.</p>
+    <p>Foundation models pretrained on large fMRI collections should transfer to new cohorts and tasks. For predicting individual phenotypes, however, they often do not outperform kernel ridge regression (KRR) on functional connectivity (FC). This line of work studies when and how they can, through open pretraining data, prediction models for small cohorts, and better pretraining targets and objectives.</p>
     <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview">
     <ul class="theme-items">
       <li id="brainpfn"><strong><a href="/research/brainpfn/">BrainPFN</a>.</strong> Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass, without refitting.
         <span class="ref"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · <a href="/research/brainpfn/">Details</a></span></li>
-      <li id="open-fmind"><strong><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases.
+      <li id="open-fmind"><strong><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases. BrainPFN and the spectral filter work below are trained on data from Open-fMIND.
         <ul class="project-stats">
           <li><strong>14,016</strong> subjects</li>
           <li><strong>52,505</strong> functional runs</li>
@@ -31,9 +31,9 @@ layout: home
         </ul>
         <span class="ref">Coming soon · Joint work with G. Marraffini and D. Wassermann · <a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></span></li>
       <li id="connectome-spectrum"><strong>Spectral filtering of FC as a pretraining target.</strong> Kernel ridge regression on FC still predicts individual phenotypes better than the brain foundation models we tested. A spectral filter that recalibrates the eigenvalues of each subject's FC matches or exceeds this baseline across 5 datasets, 11 parcellations and 6 targets. Used as a pretraining target, it lets a small encoder trained on about 4,000 hours of fMRI from 162 open datasets perform on par with the best of 6 published foundation models, with an order of magnitude fewer parameters.
-        <span class="ref"><a href="https://arxiv.org/abs/2609.37642">Flattening the Connectome Spectrum: A Spectral Filter for FC Induces a Pretraining Target for fMRI Encoders</a>, Preprint 2026 · With G. Marraffini, V. Shevchenko and D. Wassermann</span></li>
-      <li id="timber"><strong>TIMBER.</strong> Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on gender classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.
-        <span class="ref"><a href="https://hal.science/hal-05632181">TIMBER: Data-Efficient Self-Supervised Representation Learning for fMRI Time Series</a>, Preprint 2026 · With A. Le Bris and D. Wassermann</span></li>
+        <span class="ref"><a href="https://arxiv.org/abs/2609.37642">Flattening the Connectome Spectrum: A Spectral Filter for FC Induces a Pretraining Target for fMRI Encoders</a>, Preprint 2026 · G. Marraffini, V. Shevchenko, <u>C. A. Barbano</u>, D. Wassermann</span></li>
+      <li id="timber"><strong>TIMBER.</strong> Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on sex classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.
+        <span class="ref"><a href="https://hal.science/hal-05632181">TIMBER: Data-Efficient Self-Supervised Representation Learning for fMRI Time Series</a>, Preprint 2026 · A. Le Bris, <u>C. A. Barbano</u>, D. Wassermann</span></li>
     </ul>
   </article>
 
@@ -49,7 +49,7 @@ layout: home
       <li><strong>Robust brain age estimation</strong> with contrastive learning. An extension of our ISBI 2023 work to over 20,000 T1 scans from four public datasets, studying generalization to unseen sites, robustness to site effects, and accelerated ageing in cognitive impairment and Alzheimer's disease.
         <span class="ref"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a>, Pattern Recognition Letters 2026</span></li>
       <li><strong>Normative modelling of brain anatomy</strong> for unsupervised anomaly detection, with a conditional diffusion model.
-        <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S016786552500371X">Unsupervised contrastive analysis for anomaly detection in brain MRIs via conditional diffusion models</a>, Pattern Recognition Letters 2026</span></li>
+        <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S016786552500371X">Unsupervised contrastive analysis for anomaly detection in brain MRIs via conditional diffusion models</a>, Pattern Recognition Letters 2026 · C. Patrício, <u>C. A. Barbano</u>, A. Fiandrotti, R. Renzulli, M. Grangetto, L. F. Teixeira, J. C. Neves</span></li>
       <li><strong>Modelling brain and disease development</strong> from longitudinal and multimodal brain imaging, with brain age prediction and generative models.
         <span class="ref">With Akshita Kumar, Ph.D. student co-supervised with Pietro Gori · <a href="https://theses.fr/s428919">Thesis</a></span></li>
     </ul>

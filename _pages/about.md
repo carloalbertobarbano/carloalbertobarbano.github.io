@@ -33,7 +33,7 @@ redirect_from: [/about/, /about.html]
           <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
           <span class="project-tag">Preprint, 2026</span>
         </div>
-        <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic tasks built from real FC matrices predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI.</p>
+        <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic tasks built from real functional connectivity (FC) matrices predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI.</p>
         <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a><a href="/research/#fmri">More</a></p>
       </div>
     </article>
@@ -69,6 +69,21 @@ redirect_from: [/about/, /about.html]
   </div>
 </section>
 
+<section class="home-resources">
+  <div class="wrap" markdown="0">
+    <div class="resources-box">
+      <h2>Software and data</h2>
+      <ul>
+        <li><a href="https://github.com/EIDOSLAB/AnatCL">AnatCL</a><span>Code and pre-trained models for anatomical brain MRI</span></li>
+        <li><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a><span>Open fMRI timeseries and FC collection · coming soon</span></li>
+        <li><a href="/research/brainpfn/">BrainPFN</a><span>Meta-training pool, code and checkpoints · upon acceptance</span></li>
+        <li><a href="https://github.com/EIDOSLAB/UNITOPATHO">UniToPatho</a><span>Histopathology dataset for colorectal polyp classification</span></li>
+        <li><a href="https://github.com/EIDOSLAB/simplify">Simplify</a><span>Python library for optimizing pruned neural networks</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="home-updates">
   <div class="wrap home-cols" markdown="0">
     <div class="home-side">
@@ -98,6 +113,12 @@ redirect_from: [/about/, /about.html]
           <li><span class="when">2018 – 2020</span><strong>M.Sc. in Artificial Intelligence</strong>, University of Turin</li>
         </ul>
       </div>
+      <div class="home-timeline">
+        <h2>Supervision</h2>
+        <ul>
+          <li><span class="when">Feb. 2026 – now</span><strong>Akshita Kumar</strong>, Ph.D. student, Institut Polytechnique de Paris, co-supervised with Pietro Gori. Self-supervised learning for longitudinal and multimodal brain imaging · <a href="https://theses.fr/s428919">Thesis</a></li>
+        </ul>
+      </div>
     </div>
     <div class="home-pubs">
     <h2>Selected publications</h2>
@@ -110,6 +131,11 @@ redirect_from: [/about/, /about.html]
       <li>
         <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a></span>
         <span class="meta"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto</span>
+        <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
+      </li>
+      <li>
+        <span class="title"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a></span>
+        <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, P. Gori</span>
         <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
       </li>
       <li>
