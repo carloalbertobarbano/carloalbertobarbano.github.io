@@ -59,7 +59,7 @@ redirect_from: [/about/, /about.html]
           <h3><a href="/research/#brain-anatomy">Foundation and normative models of brain anatomy</a></h3>
         </div>
         <p>AnatCL, a foundation model for anatomical brain MRI, normative models for anomaly detection, and models of brain and disease development.</p>
-        <p class="project-links"><a href="/research/anatcl/">AnatCL</a><a href="/research/#brain-anatomy">More</a></p>
+        <p class="project-links"><a href="/research/anatcl/">AnatCL</a><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">AnatCL paper</a><a href="/research/#brain-anatomy">More</a></p>
       </div>
       <img class="project-media" src="/images/research/anatcl-card.svg" alt="AnatCL: anatomical MRI, morphological descriptors and contrastive pre-training">
     </article>
