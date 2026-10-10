@@ -218,8 +218,7 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   publications:
-    output: true
-    permalink: /:collection/:path/
+    output: false # entries are data only (llms.txt, sitemap page); no per-paper pages
   #talks:
   #  output: true
   #  permalink: /:collection/:path/
@@ -254,12 +253,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: publication
   # _portfolio
   - scope:
       path: ""

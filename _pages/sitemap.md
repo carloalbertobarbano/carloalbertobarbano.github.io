@@ -28,7 +28,7 @@ permalink: /sitemap/
   <ul class="theme-items">
     {%- assign pubs = site.publications | sort: "date" | reverse %}
     {%- for p in pubs %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a>
+    <li><a href="{{ p.paperurl }}">{{ p.title }}</a>
       <span class="ref">{{ p.authors | replace: "Carlo Alberto Barbano", "<u>Carlo Alberto Barbano</u>" }} · {{ p.venue }}, {{ p.date | date: "%Y" }}</span></li>
     {%- endfor %}
   </ul>
