@@ -78,7 +78,7 @@ redirect_from: [/about/, /about.html]
         <li><a href="https://github.com/EIDOSLAB/AnatCL">AnatCL</a>
           <span>Code and pre-trained weights for the AnatCL brain MRI models. <code>pip install anatcl</code></span></li>
         <li><a href="https://github.com/EIDOSLAB/simplify">Simplify</a>
-          <span>Removes the zeroed-out parts of a pruned PyTorch model, so that it actually runs faster.</span></li>
+          <span>Removes the zeroed-out parts of a pruned PyTorch model, so that it actually runs faster. <code>pip install torch-simplify</code></span></li>
         <li><a href="https://github.com/EIDOSLAB/UNITOPATHO">UniToPatho</a>
           <span>9,536 H&amp;E patches of colorectal polyps, labelled by polyp type and adenoma dysplasia grade.</span></li>
       </ul>
