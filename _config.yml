@@ -89,7 +89,6 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -142,6 +141,9 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://scholar.google.com/citations?user=a1jysFsAAAAJ"
+    - "https://orcid.org/0000-0001-9512-0440"
+    - "https://github.com/carloalbertobarbano"
 
 
 # Analytics
@@ -159,6 +161,7 @@ include:
   - _pages
   - files
 exclude:
+  - markdown_generator
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -321,11 +324,12 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
+# Category and tag archive pages are not used; leaving type empty hides the links
 category_archive:
-  type: liquid
+  type:
   path: /categories/
 tag_archive:
-  type: liquid
+  type:
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:

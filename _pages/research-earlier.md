@@ -1,4 +1,5 @@
 ---
+description: "Earlier work of Carlo Alberto Barbano on contrastive representation learning, debiasing, and medical imaging applications."
 permalink: /research/earlier-work/
 title: "Earlier work"
 layout: home

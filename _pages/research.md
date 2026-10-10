@@ -1,4 +1,5 @@
 ---
+description: "Research of Carlo Alberto Barbano: BrainPFN, Open-fMIND, and foundation and normative models of brain anatomy."
 permalink: /research/
 title: "Research"
 layout: home

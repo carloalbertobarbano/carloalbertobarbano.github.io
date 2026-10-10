@@ -1,4 +1,5 @@
 ---
+description: "AnatCL: an anatomical foundation model for brain MRI, trained with contrastive learning guided by anatomical features and age."
 permalink: /research/anatcl/
 title: "AnatCL"
 layout: home

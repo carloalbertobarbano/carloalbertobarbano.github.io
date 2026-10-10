@@ -1,4 +1,5 @@
 ---
+description: "BrainPFN: amortized brain–behaviour prediction from fMRI functional connectivity with Prior-Data Fitted Networks."
 permalink: /research/brainpfn/
 title: "BrainPFN"
 layout: home

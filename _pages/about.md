@@ -1,4 +1,5 @@
 ---
+description: "Carlo Alberto Barbano, Starting Researcher in the MIND team at Inria Saclay, working on foundation models for fMRI and brain–behaviour prediction."
 permalink: /
 title: "Carlo Alberto Barbano"
 layout: home
