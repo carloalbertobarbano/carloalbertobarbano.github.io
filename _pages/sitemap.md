@@ -1,37 +1,37 @@
 ---
-layout: archive
+layout: home
 title: "Sitemap"
+description: "All pages and publications on the website of Carlo Alberto Barbano."
 permalink: /sitemap/
-author_profile: true
 ---
 
-{% include base_path %}
+<div class="home-narrow" markdown="0">
 
-A list of all the posts and pages found on the site. For you robots out there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+<header class="page-head">
+  <h1>Sitemap</h1>
+  <p>All pages and publications on this site. An <a href="/sitemap.xml">XML version</a> is also available.</p>
+</header>
 
-<h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
+<section>
+  <h2>Pages</h2>
+  <ul class="theme-items">
+    <li><a href="/">Home</a></li>
+    <li><a href="/research/">Research</a></li>
+    <li><a href="/research/brainpfn/">BrainPFN</a></li>
+    <li><a href="/research/anatcl/">AnatCL</a></li>
+    <li><a href="/research/earlier-work/">Earlier work</a></li>
+  </ul>
+</section>
 
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+<section id="publications">
+  <h2>Publications</h2>
+  <ul class="theme-items">
+    {%- assign pubs = site.publications | sort: "date" | reverse %}
+    {%- for p in pubs %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a>
+      <span class="ref">{{ p.authors | replace: "Carlo Alberto Barbano", "<u>Carlo Alberto Barbano</u>" }} · {{ p.venue }}, {{ p.date | date: "%Y" }}</span></li>
+    {%- endfor %}
+  </ul>
+</section>
 
-{% capture written_label %}'None'{% endcapture %}
-
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+</div>

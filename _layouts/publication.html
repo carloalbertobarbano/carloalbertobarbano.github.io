@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<main class="home" role="main">
+  <div class="home-narrow">
+    <header class="page-head">
+      <p class="crumb"><a href="/sitemap/#publications">Publications</a></p>
+      <h1>{{ page.title }}</h1>
+      <p class="byline">{{ page.authors | replace: "Carlo Alberto Barbano", "<u>Carlo Alberto Barbano</u>" }}</p>
+      <p class="byline">{{ page.venue }}, {{ page.date | date: "%Y" }}{% if page.note %} · {{ page.note }}{% endif %}</p>
+      <p class="project-links">
+        <a href="{{ page.paperurl }}">Paper</a>
+        {%- for link in page.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+      </p>
+    </header>
+
+    <section class="pub-cite">
+      <h2>Citation</h2>
+      <p>{{ page.citation }}</p>
+    </section>
+
+    <p class="home-more"><a href="{{ site.author.googlescholar }}">All publications on Google Scholar →</a></p>
+  </div>
+</main>
