@@ -21,7 +21,7 @@ layout: home
     <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview">
     <ul class="theme-items">
       <li id="brainpfn"><strong><a href="/research/brainpfn/">BrainPFN</a>.</strong> Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass, without refitting.
-        <span class="ref"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · <a href="/research/brainpfn/">Details</a></span></li>
+        <span class="ref"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · With D. Wassermann · <a href="/research/brainpfn/">Details</a></span></li>
       <li id="open-fmind"><strong><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases. BrainPFN and the spectral filter work below are trained on data from Open-fMIND.
         <ul class="project-stats">
           <li><strong>14,016</strong> subjects</li>
@@ -45,9 +45,9 @@ layout: home
     <img class="project-figure" src="/images/research/anatcl.svg" alt="AnatCL overview: anatomical MRIs, anatomical similarity, contrastive pre-training, linear probing">
     <ul class="theme-items">
       <li><strong><a href="/research/anatcl/">AnatCL</a>.</strong> An open-source foundation model for anatomical brain MRI, trained with contrastive learning guided by anatomical features and age. In an independent travelling-heads benchmark, its representations were the most reliable across scanners among the models tested.
-        <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a>, Pattern Recognition Letters 2026 · <a href="/research/anatcl/">Details</a></span></li>
+        <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a>, Pattern Recognition Letters 2026 · With M. Brunello, B. Dufumier, M. Grangetto · <a href="/research/anatcl/">Details</a></span></li>
       <li><strong>Robust brain age estimation</strong> with contrastive learning. An extension of our ISBI 2023 work to over 20,000 T1 scans from four public datasets, studying generalization to unseen sites, robustness to site effects, and accelerated ageing in cognitive impairment and Alzheimer's disease.
-        <span class="ref"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a>, Pattern Recognition Letters 2026</span></li>
+        <span class="ref"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a>, Pattern Recognition Letters 2026 · With B. Dufumier, E. Duchesnay, M. Grangetto, P. Gori</span></li>
       <li><strong>Normative modelling of brain anatomy</strong> for unsupervised anomaly detection, with a conditional diffusion model.
         <span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S016786552500371X">Unsupervised contrastive analysis for anomaly detection in brain MRIs via conditional diffusion models</a>, Pattern Recognition Letters 2026 · C. Patrício, <u>C. A. Barbano</u>, A. Fiandrotti, R. Renzulli, M. Grangetto, L. F. Teixeira, J. C. Neves</span></li>
       <li><strong>Modelling brain and disease development</strong> from longitudinal and multimodal brain imaging, with brain age prediction and generative models.
