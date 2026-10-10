@@ -30,6 +30,8 @@ layout: home
           <li><strong>2.73M</strong> ROI timeseries</li>
         </ul>
         <span class="ref">Coming soon · Joint work with G. Marraffini and D. Wassermann · <a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></span></li>
+      <li id="connectome-spectrum"><strong>Spectral filtering of FC as a pretraining target.</strong> Kernel ridge regression on FC still predicts individual phenotypes better than the brain foundation models we tested. A spectral filter that recalibrates the eigenvalues of each subject's FC matches or exceeds this baseline across 5 datasets, 11 parcellations and 6 targets. Used as a pretraining target, it lets a small encoder trained on about 4,000 hours of fMRI from 162 open datasets perform on par with the best of 6 published foundation models, with an order of magnitude fewer parameters.
+        <span class="ref"><a href="https://arxiv.org/abs/2609.37642">Flattening the Connectome Spectrum: A Spectral Filter for FC Induces a Pretraining Target for fMRI Encoders</a>, Preprint 2026 · With G. Marraffini, V. Shevchenko and D. Wassermann</span></li>
       <li id="timber"><strong>TIMBER.</strong> Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on gender classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.
         <span class="ref"><a href="https://hal.science/hal-05632181">TIMBER: Data-Efficient Self-Supervised Representation Learning for fMRI Time Series</a>, Preprint 2026 · With A. Le Bris and D. Wassermann</span></li>
     </ul>
