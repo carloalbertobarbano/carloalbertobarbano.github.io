@@ -30,11 +30,10 @@ redirect_from: [/about/, /about.html]
       <img class="project-media" src="/images/research/brainpfn-card.svg" alt="BrainPFN: from fMRI to connectivity, sampled brain–behaviour mechanisms, meta-training, and prediction on new data">
       <div class="project-body">
         <div class="project-head">
-          <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
-          <span class="project-tag">Preprint, 2026</span>
+          <h3><a href="/research/#fmri">Foundation models for fMRI</a></h3>
         </div>
-        <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic tasks built from real functional connectivity (FC) matrices predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI.</p>
-        <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a><a href="/research/#fmri">More</a></p>
+        <p>BrainPFN, a transformer meta-trained on synthetic tasks built from real functional connectivity (FC) matrices, predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI. Related work covers pretraining targets derived from FC and self-supervised learning from raw fMRI time series.</p>
+        <p class="project-links"><a href="/research/brainpfn/">BrainPFN</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a><a href="/research/#fmri">More</a></p>
       </div>
     </article>
 
