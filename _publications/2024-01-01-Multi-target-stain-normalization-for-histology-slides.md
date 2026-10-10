@@ -1,10 +1,11 @@
 ---
-title: "Multi-target stain normalization for histology slides"
+title: "Multi-target Stain Normalization for Histology Slides"
 collection: publications
 category: conferences
 permalink: /publication/2024-01-01-Multi-target-stain-normalization-for-histology-slides
-date: 2024-01-01
-venue: 'In the proceedings of 2nd International Workshop on Medical Optical Imaging and Virtual Microscopy Image Analysis (MOVI 2024)'
-citation: ' Desislav Ivanov,  Carlo Barbano,  Marco Grangetto, &quot;Multi-target stain normalization for histology slides.&quot; In the proceedings of 2nd International Workshop on Medical Optical Imaging and Virtual Microscopy Image Analysis (MOVI 2024), 2024.'
+date: 2025-01-01
+venue: "Medical Optical Imaging and Virtual Microscopy Image Analysis (MOVI 2024)"
+paperurl: "https://doi.org/10.1007/978-3-031-77786-8_4"
+citation: "Desislav Ivanov, Carlo Alberto Barbano, Marco Grangetto. \"Multi-target Stain Normalization for Histology Slides.\" Medical Optical Imaging and Virtual Microscopy Image Analysis (MOVI 2024), 2025. doi:10.1007/978-3-031-77786-8_4"
 ---
-Use [Google Scholar](https://scholar.google.com/scholar?q=Multi+target+stain+normalization+for+histology+slides){:target="_blank"} for full citation
+**Authors:** Desislav Ivanov, Carlo Alberto Barbano, Marco Grangetto
