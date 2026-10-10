@@ -248,11 +248,12 @@ $home-prose: 46rem;
   h2 { margin-bottom: 0.75rem; }
   ul {
     list-style: none; margin: 0; padding: 0;
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 0.4rem 2rem;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 0.9rem 2.5rem;
   }
   li { font-size: 0.95rem; line-height: 1.5; }
-  li a { font-weight: 700; margin-right: 0.5rem; }
+  li a { display: block; font-weight: 700; }
   li span { color: $home-muted; }
+  code { font-size: 0.82rem; padding: 0.05rem 0.35rem; border-radius: 4px; background: rgba($home-ink, 0.06); color: $home-ink; white-space: nowrap; }
 }
 @media (max-width: 700px) {
   .resources-box { padding: 1.1rem 1rem; ul { grid-template-columns: 1fr; } }

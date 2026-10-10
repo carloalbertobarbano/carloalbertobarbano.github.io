@@ -73,11 +73,14 @@ redirect_from: [/about/, /about.html]
     <div class="resources-box">
       <h2>Software and data</h2>
       <ul>
-        <li><a href="https://github.com/EIDOSLAB/AnatCL">AnatCL</a><span>Code and pre-trained models for anatomical brain MRI</span></li>
-        <li><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a><span>Open fMRI timeseries and FC collection · coming soon</span></li>
-        <li><a href="/research/brainpfn/">BrainPFN</a><span>Meta-training pool, code and checkpoints · upon acceptance</span></li>
-        <li><a href="https://github.com/EIDOSLAB/UNITOPATHO">UniToPatho</a><span>Histopathology dataset for colorectal polyp classification</span></li>
-        <li><a href="https://github.com/EIDOSLAB/simplify">Simplify</a><span>Python library for optimizing pruned neural networks</span></li>
+        <li><a href="https://github.com/EIDOSLAB/torchstain">torchstain</a>
+          <span>Stain normalization and augmentation for histopathology images, on GPU, with PyTorch, TensorFlow and NumPy backends. I maintain it. <code>pip install torchstain</code></span></li>
+        <li><a href="https://github.com/EIDOSLAB/AnatCL">AnatCL</a>
+          <span>Code and pre-trained weights for the AnatCL brain MRI models.</span></li>
+        <li><a href="https://github.com/EIDOSLAB/simplify">Simplify</a>
+          <span>Removes the zeroed-out parts of a pruned PyTorch model, so that it actually runs faster.</span></li>
+        <li><a href="https://github.com/EIDOSLAB/UNITOPATHO">UniToPatho</a>
+          <span>9,536 H&amp;E patches of colorectal polyps, labelled by polyp type and adenoma dysplasia grade.</span></li>
       </ul>
     </div>
   </div>
