@@ -1,5 +1,5 @@
 ---
-description: "Research of Carlo Alberto Barbano: BrainPFN, Open-fMIND, TIMBER, and foundation and normative models of brain anatomy."
+description: "Research of Carlo Alberto Barbano: foundation models for fMRI (BrainPFN, Open-fMIND, TIMBER) and foundation and normative models of brain anatomy (AnatCL)."
 permalink: /research/
 title: "Research"
 layout: home
@@ -13,42 +13,20 @@ layout: home
 </header>
 
 <section>
-  <article class="project project--featured" id="brainpfn">
+  <article class="project project--featured" id="fmri">
     <div class="project-head">
-      <h3><a href="/research/brainpfn/">BrainPFN</a></h3>
-      <span class="project-tag">Preprint, 2026</span>
+      <h3>Foundation models for fMRI</h3>
     </div>
-    <p>Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass.</p>
+    <p>Models of brain function trained on large collections of fMRI data and transferred to new cohorts and tasks, such as predicting behaviour from functional connectivity.</p>
     <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview">
-    <p class="project-links"><a href="/research/brainpfn/">Details</a><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
-  </article>
-
-  <article class="project project--split" id="open-fmind">
-      <div class="project-body">
-    <div class="project-head">
-      <h3>Open-fMIND</h3>
-      <span class="project-tag">Coming soon</span>
-    </div>
-    <p>An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases, with dataset-level provenance.</p>
-    <p>Joint work with G. Marraffini and D. Wassermann.</p>
-    <p class="project-links"><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></p>
-      </div>
-    <ul class="project-stats">
-      <li><strong>14,016</strong> subjects</li>
-      <li><strong>52,505</strong> functional runs</li>
-      <li><strong>52</strong> atlases</li>
-      <li><strong>2.73M</strong> ROI timeseries</li>
+    <ul class="theme-items">
+      <li id="brainpfn"><strong><a href="/research/brainpfn/">BrainPFN</a>.</strong> Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass, without refitting.
+        <span class="ref"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · <a href="/research/brainpfn/">Details</a></span></li>
+      <li id="open-fmind"><strong><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases: 14,016 subjects, 52,505 functional runs, 52 atlases.
+        <span class="ref">Coming soon · Joint work with G. Marraffini and D. Wassermann · <a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></span></li>
+      <li id="timber"><strong>TIMBER.</strong> Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on gender classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.
+        <span class="ref"><a href="https://hal.science/hal-05632181">TIMBER: Data-Efficient Self-Supervised Representation Learning for fMRI Time Series</a>, Preprint 2026 · With A. Le Bris and D. Wassermann</span></li>
     </ul>
-    </article>
-
-  <article class="project" id="timber">
-    <div class="project-head">
-      <h3>TIMBER</h3>
-      <span class="project-tag">Preprint, 2026</span>
-    </div>
-    <p>Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. A reconstruction objective (TACO) captures temporal dependencies without explicit positional encoding. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on gender classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.</p>
-    <p>With A. Le Bris and D. Wassermann.</p>
-    <p class="project-links"><a href="https://hal.science/hal-05632181">Paper (HAL)</a></p>
   </article>
 
   <article class="project" id="brain-anatomy">
