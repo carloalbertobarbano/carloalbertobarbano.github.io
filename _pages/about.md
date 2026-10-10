@@ -76,7 +76,7 @@ redirect_from: [/about/, /about.html]
         <li><a href="https://github.com/EIDOSLAB/torchstain">torchstain</a>
           <span>Stain normalization and augmentation for histopathology images, on GPU, with PyTorch, TensorFlow and NumPy backends. I maintain it. <code>pip install torchstain</code></span></li>
         <li><a href="https://github.com/EIDOSLAB/AnatCL">AnatCL</a>
-          <span>Code and pre-trained weights for the AnatCL brain MRI models.</span></li>
+          <span>Code and pre-trained weights for the AnatCL brain MRI models. <code>pip install anatcl</code></span></li>
         <li><a href="https://github.com/EIDOSLAB/simplify">Simplify</a>
           <span>Removes the zeroed-out parts of a pruned PyTorch model, so that it actually runs faster.</span></li>
         <li><a href="https://github.com/EIDOSLAB/UNITOPATHO">UniToPatho</a>
