@@ -126,39 +126,60 @@ redirect_from: [/about/, /about.html]
     <h2>Selected publications</h2>
     <ul>
       <li>
-        <span class="title"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a></span>
-        <span class="meta"><u>C. A. Barbano</u>, D. Wassermann</span>
-        <span class="meta"><span class="venue">Preprint</span>, 2026</span>
+        <a class="thumb" href="https://inria.hal.science/hal-05767107" tabindex="-1" aria-hidden="true"><img src="/images/pubs/brainpfn.png" alt="" loading="lazy" width="88" height="88"></a>
+        <div>
+          <span class="title"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a></span>
+          <span class="meta"><u>C. A. Barbano</u>, D. Wassermann</span>
+          <span class="meta"><span class="venue">Preprint</span>, 2026</span>
+        </div>
       </li>
       <li>
-        <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a></span>
-        <span class="meta"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier, M. Grangetto</span>
-        <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
+        <a class="thumb" href="https://www.sciencedirect.com/science/article/pii/S0167865525003848" tabindex="-1" aria-hidden="true"><img src="/images/pubs/anatcl.png" alt="" loading="lazy" width="88" height="88"></a>
+        <div>
+          <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Anatomical foundation models for brain MRIs</a></span>
+          <span class="meta"><u>C. A. Barbano</u>, M. Brunello, B. Dufumier&nbsp;et&nbsp;al.</span>
+          <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
+        </div>
       </li>
       <li>
-        <span class="title"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a></span>
-        <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, P. Gori</span>
-        <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
+        <a class="thumb" href="https://doi.org/10.1016/j.patrec.2026.02.032" tabindex="-1" aria-hidden="true"><img src="/images/pubs/brain-age-robust.png" alt="" loading="lazy" width="88" height="88"></a>
+        <div>
+          <span class="title"><a href="https://doi.org/10.1016/j.patrec.2026.02.032">Robust brain age estimation from structural MRI with contrastive learning</a></span>
+          <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay&nbsp;et&nbsp;al.</span>
+          <span class="meta"><span class="venue">Pattern Recognition Letters</span>, 2026</span>
+        </div>
       </li>
       <li>
-        <span class="title"><a href="https://arxiv.org/abs/2211.08326">Contrastive learning for regression in multi-site brain age prediction</a><span class="badge">Best poster</span></span>
-        <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay, M. Grangetto, P. Gori</span>
-        <span class="meta"><span class="venue">ISBI</span>, 2023</span>
+        <a class="thumb" href="https://arxiv.org/abs/2211.08326" tabindex="-1" aria-hidden="true"><img src="/images/pubs/brain-age-isbi.png" alt="" loading="lazy" width="88" height="88"></a>
+        <div>
+          <span class="title"><a href="https://arxiv.org/abs/2211.08326">Contrastive learning for regression in multi-site brain age prediction</a><span class="badge">Best poster</span></span>
+          <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Duchesnay&nbsp;et&nbsp;al.</span>
+          <span class="meta"><span class="venue">ISBI</span>, 2023</span>
+        </div>
       </li>
       <li>
-        <span class="title"><a href="https://arxiv.org/abs/2211.05568">Unbiased Supervised Contrastive Learning</a></span>
-        <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Tartaglione, M. Grangetto, P. Gori</span>
-        <span class="meta"><span class="venue">ICLR</span>, 2023</span>
+        <a class="thumb" href="https://arxiv.org/abs/2211.05568" tabindex="-1" aria-hidden="true"><img src="/images/pubs/unbiased-supcon.png" alt="" loading="lazy" width="88" height="88"></a>
+        <div>
+          <span class="title"><a href="https://arxiv.org/abs/2211.05568">Unbiased Supervised Contrastive Learning</a></span>
+          <span class="meta"><u>C. A. Barbano</u>, B. Dufumier, E. Tartaglione&nbsp;et&nbsp;al.</span>
+          <span class="meta"><span class="venue">ICLR</span>, 2023</span>
+        </div>
       </li>
       <li>
-        <span class="title"><a href="https://arxiv.org/abs/2206.01646">Integrating Prior Knowledge in Contrastive Learning with Kernel</a></span>
-        <span class="meta">B. Dufumier, <u>C. A. Barbano</u>, R. Louiset, E. Duchesnay, P. Gori</span>
-        <span class="meta"><span class="venue">ICML</span>, 2023</span>
+        <a class="thumb" href="https://arxiv.org/abs/2206.01646" tabindex="-1" aria-hidden="true"><img src="/images/pubs/kernel-cl.png" alt="" loading="lazy" width="88" height="88"></a>
+        <div>
+          <span class="title"><a href="https://arxiv.org/abs/2206.01646">Integrating Prior Knowledge in Contrastive Learning with Kernel</a></span>
+          <span class="meta">B. Dufumier, <u>C. A. Barbano</u>, R. Louiset&nbsp;et&nbsp;al.</span>
+          <span class="meta"><span class="venue">ICML</span>, 2023</span>
+        </div>
       </li>
       <li>
-        <span class="title"><a href="https://arxiv.org/abs/2103.02023">EnD: Entangling and Disentangling deep representations for bias correction</a></span>
-        <span class="meta">E. Tartaglione, <u>C. A. Barbano</u>, M. Grangetto</span>
-        <span class="meta"><span class="venue">CVPR</span>, 2021</span>
+        <a class="thumb" href="https://arxiv.org/abs/2103.02023" tabindex="-1" aria-hidden="true"><img src="/images/pubs/end.png" alt="" loading="lazy" width="88" height="88"></a>
+        <div>
+          <span class="title"><a href="https://arxiv.org/abs/2103.02023">EnD: Entangling and Disentangling deep representations for bias correction</a></span>
+          <span class="meta">E. Tartaglione, <u>C. A. Barbano</u>, M. Grangetto</span>
+          <span class="meta"><span class="venue">CVPR</span>, 2021</span>
+        </div>
       </li>
     </ul>
     <p class="home-more"><a href="{{ site.author.googlescholar }}">All publications on Google Scholar →</a></p>
