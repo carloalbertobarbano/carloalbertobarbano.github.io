@@ -266,3 +266,10 @@ $home-prose: 46rem;
 @media (max-width: 700px) {
   .resources-box { padding: 1.1rem 1rem; ul { grid-template-columns: 1fr; } }
 }
+
+/* Scroll reveal (classes added by the script on the home page) */
+.reveal {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.is-visible { opacity: 1; transform: none; }

@@ -186,3 +186,21 @@ redirect_from: [/about/, /about.html]
     </div>
   </div>
 </section>
+
+<script>
+  // Fade and slide content in as it scrolls into view
+  (function () {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var items = document.querySelectorAll('main.home h2, main.home .project, main.home .home-more, .resources-box, .home-news li, .home-timeline li, .home-pubs li');
+    var observer = new IntersectionObserver(function (entries) {
+      var n = 0;
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = (n++ * 70) + 'ms';
+        e.target.classList.add('is-visible');
+        observer.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+    items.forEach(function (el) { el.classList.add('reveal'); observer.observe(el); });
+  })();
+</script>
