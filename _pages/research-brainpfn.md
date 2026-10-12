@@ -12,7 +12,7 @@ layout: home
   <h1>BrainPFN</h1>
   <p>Amortized brain–behaviour prediction via Prior-Data Fitted Networks.</p>
   <p class="byline"><u>C. A. Barbano</u>, D. Wassermann · Preprint, 2026</p>
-  <p class="project-links"><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a></p>
+  <p class="project-links"><a href="https://inria.hal.science/hal-05767107">Paper (HAL)</a><a href="https://github.com/carloalbertobarbano/BrainPFN">Code</a></p>
 </header>
 
 <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview: real connectomes, sampled mechanisms, meta-training a transformer, prediction on new data">
@@ -47,7 +47,7 @@ Evaluation on four independent cohorts (HCP Young Adult, HCP-Aging, Cam-CAN, AOM
 
 ## Release
 
-The meta-training pool, code, and model checkpoints will be made public upon acceptance.
+The pretrained model is available on [GitHub](https://github.com/carloalbertobarbano/BrainPFN) and as a Python package: `pip install brainpfn`. The meta-training pool will be made public upon acceptance.
 
 </section>
 
