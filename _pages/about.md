@@ -71,16 +71,16 @@ redirect_from: [/about/, /about.html]
 <section class="home-resources">
   <div class="wrap" markdown="0">
     <div class="resources-box">
-      <h2>Software and data</h2>
+      <h2>Open source software</h2>
       <ul>
-        <li><a href="https://github.com/EIDOSLAB/torchstain">torchstain</a>
-          <span>Stain normalization and augmentation for histopathology images, on GPU, with PyTorch, TensorFlow and NumPy backends. I maintain it. <code>pip install torchstain</code></span></li>
+        <li><a href="https://github.com/carloalbertobarbano/BrainPFN">BrainPFN</a>
+          <span>Pretrained BrainPFN model for predicting behavioural scores from resting-state FC, with a scikit-learn interface. <code>pip install brainpfn</code></span></li>
         <li><a href="https://github.com/EIDOSLAB/AnatCL">AnatCL</a>
           <span>Code and pre-trained weights for the AnatCL brain MRI models. <code>pip install anatcl</code></span></li>
         <li><a href="https://github.com/EIDOSLAB/simplify">Simplify</a>
           <span>Removes the zeroed-out parts of a pruned PyTorch model, so that it actually runs faster. <code>pip install torch-simplify</code></span></li>
-        <li><a href="https://github.com/EIDOSLAB/UNITOPATHO">UniToPatho</a>
-          <span>9,536 H&amp;E patches of colorectal polyps, labelled by polyp type and adenoma dysplasia grade.</span></li>
+        <li><a href="https://github.com/EIDOSLAB/torchstain">torchstain</a>
+          <span>Stain normalization and augmentation for histopathology images, on GPU, with PyTorch, TensorFlow and NumPy backends. I maintain it. <code>pip install torchstain</code></span></li>
       </ul>
     </div>
   </div>
