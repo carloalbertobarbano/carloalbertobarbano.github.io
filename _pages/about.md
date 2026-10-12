@@ -188,7 +188,7 @@ redirect_from: [/about/, /about.html]
 </section>
 
 <script>
-  // Fade and slide content in as it scrolls into view
+  /* Fade and slide content in as it scrolls into view */
   (function () {
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var items = document.querySelectorAll('main.home h2, main.home .project, main.home .home-more, .resources-box, .home-news li, .home-timeline li, .home-pubs li');
