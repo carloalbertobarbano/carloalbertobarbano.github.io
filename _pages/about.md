@@ -82,7 +82,7 @@ redirect_from: [/about/, /about.html]
         <li><a href="https://github.com/EIDOSLAB/torchstain">torchstain</a>
           <span>Stain normalization and augmentation for histopathology images, on GPU, with PyTorch, TensorFlow and NumPy backends. I maintain it. <code>pip install torchstain</code></span></li>
         <li><a href="https://github.com/carloalbertobarbano/cardkit">cardkit</a>
-          <span>Animated figures with matplotlib: a scene written once in Python, exported as GIF, WebP, MP4 and animated SVG. <code>pip install cardkit-anim</code></span></li>
+          <span>Animated figures with matplotlib: a scene written once in Python, exported as GIF, WebP, MP4 and animated SVG. It makes the animations on this website. <code>pip install cardkit-anim</code></span></li>
       </ul>
     </div>
   </div>
