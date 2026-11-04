@@ -22,14 +22,14 @@ layout: home
     <ul class="theme-items">
       <li id="brainpfn"><strong><a href="/research/brainpfn/">BrainPFN</a>.</strong> Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass, without refitting.
         <span class="ref"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · With D. Wassermann · <a href="/research/brainpfn/">Details</a></span></li>
-      <li id="open-fmind"><strong><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases. BrainPFN and the spectral filter work below are trained on data from Open-fMIND.
+      <li id="open-fmind"><strong><a href="/openfmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases. BrainPFN and the spectral filter work below are trained on data from Open-fMIND.
         <ul class="project-stats">
-          <li><strong>14,016</strong> subjects</li>
-          <li><strong>52,505</strong> functional runs</li>
+          <li><strong>11,379</strong> subjects</li>
+          <li><strong>45,731</strong> functional runs</li>
           <li><strong>52</strong> atlases</li>
-          <li><strong>2.73M</strong> ROI timeseries</li>
+          <li><strong>2.38M</strong> ROI timeseries</li>
         </ul>
-        <span class="ref">Coming soon · Joint work with G. Marraffini and D. Wassermann · <a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></span></li>
+        <span class="ref">Release v1.0, 2026 · Joint work with G. Marraffini and D. Wassermann · <a href="/openfmind/">Project page</a></span></li>
       <li id="connectome-spectrum"><strong>Spectral filtering of FC as a pretraining target.</strong> Kernel ridge regression on FC still predicts individual phenotypes better than the brain foundation models we tested. A spectral filter that recalibrates the eigenvalues of each subject's FC matches or exceeds this baseline across 5 datasets, 11 parcellations and 6 targets. Used as a pretraining target, it lets a small encoder trained on about 4,000 hours of fMRI from 162 open datasets perform on par with the best of 6 published foundation models, with an order of magnitude fewer parameters.
         <span class="ref"><a href="https://arxiv.org/abs/2609.37642">Flattening the Connectome Spectrum: A Spectral Filter for FC Induces a Pretraining Target for fMRI Encoders</a>, Preprint 2026 · G. Marraffini, V. Shevchenko, <u>C. A. Barbano</u>, D. Wassermann</span></li>
       <li id="timber"><strong>TIMBER.</strong> Data-efficient self-supervised representation learning directly from raw fMRI time series, without predefined atlases or connectivity measures. Trained without labels on 200 subjects from the Human Connectome Project, it performs competitively on sex classification and cognitive score prediction, and generalizes to autism detection on ABIDE I.

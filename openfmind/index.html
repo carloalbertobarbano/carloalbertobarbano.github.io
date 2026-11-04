@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open-fMIND — an open-access fMRI corpus for brain foundation models</title>
+<meta name="description" content="Parcellated fMRI timeseries and connectivity matrices from 322 OpenNeuro datasets: 11,379 subjects, 45,731 runs, 52 atlases.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg:        #fcfcfb;
+    --ink:       #0b0b0b;
+    --ink-2:     #52514e;
+    --ink-3:     #8a8984;
+    --rule:      #e6e5e1;
+    --accent:    #2a78d6;
+    --rest:      #eb6834;
+    --task:      #2a78d6;
+    --maxw:      1120px;
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; font-feature-settings: "tnum" 1, "cv11" 1;
+  }
+  a { color: inherit; }
+  h1, h2, h3 { margin: 0; letter-spacing: -0.025em; line-height: 1.1; font-weight: 600; }
+  p { margin: 0 0 1em; }
+  code { font-family: var(--mono); font-size: 0.86em; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  .label {
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-3); font-weight: 500;
+  }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(252, 252, 251, 0.82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent; transition: border-color .2s;
+  }
+  nav.scrolled { border-bottom-color: var(--rule); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-weight: 600; letter-spacing: -0.02em; text-decoration: none; font-size: 1.02rem; }
+  .brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-size: 0.9rem; }
+  .nav-links a { text-decoration: none; color: var(--ink-2); transition: color .15s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.cta { color: var(--ink); font-weight: 500; }
+  @media (max-width: 760px) { .nav-links a:not(.cta) { display: none; } }
+
+  /* ---------- hero ---------- */
+  .hero { padding: clamp(72px, 11vw, 132px) 0 48px; }
+  .hero h1 { font-size: clamp(2.6rem, 6.6vw, 5rem); font-weight: 600; max-width: 15ch; }
+  .hero h1 em { font-style: normal; color: var(--ink-3); }
+  .hero .lede { font-size: clamp(1.05rem, 1.9vw, 1.25rem); color: var(--ink-2); max-width: 58ch; margin-top: 28px; }
+  .links { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 32px; font-weight: 500; }
+  .links a { text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color .15s, border-color .15s; }
+  .links a:hover { color: var(--accent); border-color: var(--accent); }
+  .links a.muted { color: var(--ink-2); border-color: var(--rule); }
+
+  .figures {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 32px;
+    margin-top: clamp(56px, 8vw, 88px); padding-top: 36px; border-top: 1px solid var(--rule);
+  }
+  .figures .n { font-size: clamp(2rem, 4vw, 2.9rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1; }
+  .figures .n small { font-size: 0.5em; color: var(--ink-3); font-weight: 400; margin-left: 2px; }
+  .figures .t { color: var(--ink-2); font-size: 0.9rem; margin-top: 10px; }
+  @media (max-width: 760px) { .figures { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- embedding ---------- */
+  .embed { padding-top: clamp(64px, 9vw, 112px); }
+  .embed-head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; }
+  .embed-head h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); max-width: 16ch; }
+  .embed-head p { color: var(--ink-2); margin: 0; }
+  @media (max-width: 860px) { .embed-head { grid-template-columns: 1fr; gap: 20px; } }
+
+  .controls {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px;
+    margin-top: 40px; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    font-size: 0.9rem;
+  }
+  .seg { display: flex; gap: 20px; align-items: center; }
+  .seg button {
+    all: unset; cursor: pointer; color: var(--ink-3); padding: 2px 0; border-bottom: 1.5px solid transparent;
+    transition: color .15s, border-color .15s;
+  }
+  .seg button:hover { color: var(--ink); }
+  .seg button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+  .seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .search { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+  .search input {
+    all: unset; width: 240px; border-bottom: 1px solid var(--rule); padding: 3px 0; font-size: 0.9rem;
+    transition: border-color .15s;
+  }
+  .search input:focus { border-bottom-color: var(--ink); }
+  .search input::placeholder { color: var(--ink-3); }
+  .icon-btn { all: unset; cursor: pointer; color: var(--ink-2); font-size: 0.9rem; }
+  .icon-btn:hover { color: var(--ink); }
+  @media (max-width: 760px) { .search { margin-left: 0; } .search input { width: 180px; } }
+
+  .stage { position: relative; height: min(86vh, 900px); min-height: 520px; margin-top: 8px; }
+  #umap { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+  #umap.dragging { cursor: grabbing; }
+  .loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-3); font-size: 0.9rem; }
+
+  .legend {
+    position: absolute; left: 0; bottom: 16px; font-size: 0.82rem; color: var(--ink-2);
+    display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: center; max-width: 520px; pointer-events: none;
+  }
+  .legend .key { display: inline-flex; align-items: center; gap: 8px; }
+  .legend .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .legend .ramp { width: 120px; height: 6px; border-radius: 3px; }
+  .hint { position: absolute; right: 0; bottom: 16px; font-size: 0.78rem; color: var(--ink-3); text-align: right; }
+  .zoom { position: absolute; right: 0; top: 12px; display: flex; flex-direction: column; gap: 6px; }
+  .zoom button {
+    all: unset; cursor: pointer; width: 28px; height: 28px; display: grid; place-items: center;
+    color: var(--ink-2); font-size: 1.1rem; border-radius: 50%; background: rgba(252,252,251,.85);
+  }
+  .zoom button:hover { color: var(--ink); }
+
+  .tip {
+    position: absolute; pointer-events: none; z-index: 5; min-width: 180px; max-width: 280px;
+    background: rgba(252, 252, 251, 0.96); backdrop-filter: blur(6px);
+    box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px -8px rgba(0,0,0,.18);
+    border-radius: 8px; padding: 10px 12px; font-size: 0.8rem; line-height: 1.45; opacity: 0; transition: opacity .1s;
+  }
+  .tip.on { opacity: 1; }
+  .tip .ds { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .tip .ds i { width: 12px; height: 2px; border-radius: 1px; flex: none; }
+  .tip .nm { color: var(--ink-2); margin: 2px 0 6px; }
+  .tip .row { display: flex; justify-content: space-between; gap: 16px; color: var(--ink-2); }
+  .tip .row b { color: var(--ink); font-weight: 500; }
+
+  .caption { color: var(--ink-3); font-size: 0.82rem; max-width: 92ch; margin-top: 16px; }
+  .selected-ds { font-size: 0.9rem; color: var(--ink-2); min-height: 1.6em; margin-top: 18px; }
+  .selected-ds b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- generic sections ---------- */
+  section.block { padding: clamp(72px, 10vw, 128px) 0 0; }
+  .split { display: grid; grid-template-columns: 260px 1fr; gap: 48px; }
+  .split h2 { font-size: 1.5rem; }
+  .split .label { display: block; margin-bottom: 14px; }
+  .body { color: var(--ink-2); max-width: 70ch; }
+  .body strong { color: var(--ink); font-weight: 600; }
+  @media (max-width: 860px) { .split { grid-template-columns: 1fr; gap: 24px; } }
+
+  table { border-collapse: collapse; width: 100%; font-size: 0.93rem; margin-top: 8px; }
+  th, td { text-align: left; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+  th { font-weight: 500; color: var(--ink-3); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td:first-child { color: var(--ink-2); }
+
+  .versions { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .versions h3 { font-family: var(--mono); font-size: 1.05rem; font-weight: 500; letter-spacing: 0; margin-bottom: 10px; }
+  .versions p { color: var(--ink-2); margin: 0; }
+  @media (max-width: 680px) { .versions { grid-template-columns: 1fr; } }
+
+  ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  ol.steps li { counter-increment: s; display: grid; grid-template-columns: 48px 200px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  ol.steps li:first-child { border-top: 1px solid var(--rule); }
+  ol.steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--mono); color: var(--ink-3); font-size: 0.85rem; padding-top: 2px; }
+  ol.steps h3 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
+  ol.steps p { color: var(--ink-2); margin: 0; }
+  @media (max-width: 760px) { ol.steps li { grid-template-columns: 40px 1fr; } ol.steps li p { grid-column: 2; } }
+
+  .families { columns: 2; column-gap: 48px; }
+  .fam { break-inside: avoid; padding: 14px 0; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; }
+  .fam b { font-weight: 600; color: var(--ink); }
+  .fam span { color: var(--ink-3); font-size: 0.86rem; text-align: right; }
+  @media (max-width: 680px) { .families { columns: 1; } }
+
+  .result { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 28px; }
+  .result .n { font-size: 2.1rem; font-weight: 500; letter-spacing: -0.03em; line-height: 1; }
+  .result .vs { color: var(--ink-3); font-size: 0.86rem; margin-top: 8px; }
+  @media (max-width: 680px) { .result { grid-template-columns: 1fr; } }
+
+  pre {
+    margin: 20px 0 0; padding: 4px 0 4px 20px; border-left: 2px solid var(--rule);
+    font: 0.83rem/1.7 var(--mono); color: #2f2e2b; overflow-x: auto;
+  }
+  pre .c { color: var(--ink-3); }
+  pre .k { color: var(--accent); }
+  pre .s { color: #1f8a5b; }
+  .copy-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 32px; }
+  .copy-row h3 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
+
+  footer { padding: clamp(96px, 12vw, 160px) 0 56px; color: var(--ink-3); font-size: 0.85rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-top: 1px solid var(--rule); padding-top: 28px; }
+  footer a { text-decoration: none; color: var(--ink-2); }
+  footer a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#">Open-f<span>MIND</span></a>
+    <div class="nav-links">
+      <a href="#embedding">Explore</a>
+      <a href="#data">Data</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#atlases">Atlases</a>
+      <a href="#access">Access</a>
+      <a href="#cite">Cite</a>
+      <a class="cta" href="https://huggingface.co/datasets/cbarbano/open-fmind">Dataset ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="label" style="margin-bottom:22px">Release v1.0 · 2026</div>
+    <h1>An open fMRI corpus for brain foundation models<em>.</em></h1>
+    <p class="lede">
+      Open-fMIND is a uniformly preprocessed, openly accessible corpus of parcellated fMRI timeseries and
+      functional connectivity matrices, built from public OpenNeuro studies. Every run is processed with
+      fMRIPrep and parcellated under 52 atlases, ready for self-supervised pretraining and connectivity analyses at scale.
+    </p>
+    <div class="links">
+      <a href="https://huggingface.co/datasets/cbarbano/open-fmind">Download on Hugging Face</a>
+      <a href="#embedding" class="muted">Explore the runs</a>
+      <a href="#cite" class="muted">Cite</a>
+    </div>
+
+    <div class="figures">
+      <div><div class="n">322</div><div class="t">OpenNeuro datasets</div></div>
+      <div><div class="n">11,379</div><div class="t">subjects</div></div>
+      <div><div class="n">45,731</div><div class="t">functional runs</div></div>
+      <div><div class="n">52</div><div class="t">atlases, 14 families</div></div>
+      <div><div class="n">2.38<small>M</small></div><div class="t">timeseries (runs × atlases)</div></div>
+      <div><div class="n">11.4<small>M</small></div><div class="t">volumes</div></div>
+      <div><div class="n">6,044</div><div class="t">hours of scanning</div></div>
+      <div><div class="n">4.26<small>TB</small></div><div class="t">in 1,787 shards</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="embed" id="embedding">
+  <div class="wrap">
+    <div class="embed-head">
+      <div>
+        <div class="label" style="margin-bottom:14px">Connectivity space</div>
+        <h2>The latent organization of 44,241 runs</h2>
+      </div>
+      <p>
+        Each point is one preprocessed run, placed by UMAP from its full Schaefer-400 connectivity
+        (79,800 Fisher-z edges). Runs do not form one homogeneous cloud: twelve dense clusters hold 36% of runs,
+        rest runs gather in a band, and higher motion concentrates in one region shared by many datasets.
+        No cluster corresponds to a single dataset.
+      </p>
+    </div>
+
+    <div class="controls" role="toolbar" aria-label="Embedding controls">
+      <span class="label">Colour by</span>
+      <div class="seg" id="modes">
+        <button data-mode="dataset" aria-pressed="true">Dataset</button>
+        <button data-mode="type" aria-pressed="false">Rest / task</button>
+        <button data-mode="fd" aria-pressed="false">Motion</button>
+        <button data-mode="cluster" aria-pressed="false">Dense clusters</button>
+      </div>
+      <div class="search">
+        <input id="q" list="dslist" placeholder="Find a dataset (e.g. ds000030)" autocomplete="off" aria-label="Find a dataset">
+        <datalist id="dslist"></datalist>
+        <button class="icon-btn" id="clear" hidden>Clear</button>
+      </div>
+    </div>
+    <div class="selected-ds" id="selinfo"></div>
+  </div>
+
+  <div class="wrap" style="max-width: 1440px">
+    <div class="stage" id="stage">
+      <canvas id="umap" aria-label="UMAP of the connectivity of 44,241 runs, coloured by dataset" role="img"></canvas>
+      <div class="loading" id="loading">Loading 44,241 runs…</div>
+      <div class="zoom">
+        <button id="zin" aria-label="Zoom in">+</button>
+        <button id="zout" aria-label="Zoom out">−</button>
+        <button id="zreset" aria-label="Reset view" style="font-size:.7rem;width:auto">reset</button>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div class="hint">Drag to pan · Ctrl/Cmd + scroll or +/− to zoom · click a point to follow its dataset</div>
+      <div class="tip" id="tip"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="caption">
+      UMAP (15 neighbours, minimum distance 0.1) of 44,241 <code>preproc</code> runs from 288 datasets; datasets with fewer
+      than 5 subjects are left out. Dataset colours follow the median position of each dataset's runs (hue by x, lightness by y),
+      so neighbouring datasets have similar colours. Clusters: HDBSCAN (minimum cluster size 500, minimum samples 50).
+      Motion: mean framewise displacement, capped at the 95th percentile. Axes are arbitrary. Same embedding as Fig. 2 of the paper.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="data">
+  <div class="wrap split">
+    <div><span class="label">Data</span><h2>Two versions of the same runs</h2></div>
+    <div>
+      <div class="versions">
+        <div>
+          <h3>quasiraw</h3>
+          <p>fMRIPrep output projected onto each atlas, nothing else; shipped with the fMRIPrep confounds,
+            frame-aligned, so you can apply your own denoising.</p>
+        </div>
+        <div>
+          <h3>preproc</h3>
+          <p>The same timeseries after a fixed recipe: confound regression, scrubbing, detrending,
+            band-pass filtering and z-scoring.</p>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th></th><th class="num">quasiraw</th><th class="num">preproc</th></tr></thead>
+        <tbody>
+          <tr><td>Datasets</td><td class="num">322</td><td class="num">320</td></tr>
+          <tr><td>Subjects (counted per dataset)</td><td class="num">11,379</td><td class="num">11,320</td></tr>
+          <tr><td>Runs</td><td class="num">45,731</td><td class="num">45,019</td></tr>
+          <tr><td>Resting-state runs</td><td class="num">8,756</td><td class="num">8,704</td></tr>
+          <tr><td>Task runs</td><td class="num">36,975</td><td class="num">36,315</td></tr>
+          <tr><td>Atlases</td><td class="num">52</td><td class="num">52</td></tr>
+          <tr><td>Timeseries (runs × atlases)</td><td class="num">2.38 M</td><td class="num">2.34 M</td></tr>
+          <tr><td>Volumes (3D time points)</td><td class="num">11.39 M</td><td class="num">10.92 M</td></tr>
+        </tbody>
+      </table>
+      <p class="body" style="margin-top:20px; font-size:.92rem">
+        Every run is available for every atlas, with one connectivity matrix per timeseries. <code>preproc</code>
+        counts the volumes kept after scrubbing. Each file has a JSON sidecar with the full provenance
+        (download, fMRIPrep, parcellation, denoising, connectivity), and <code>qc.tsv</code> gives per-run motion.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pipeline">
+  <div class="wrap split">
+    <div><span class="label">Pipeline</span><h2>How the data was made</h2></div>
+    <ol class="steps">
+      <li><h3>Source data</h3><p>Brain BOLD datasets from OpenNeuro, at the snapshot recorded in each dataset description.</p></li>
+      <li><h3>fMRIPrep 25.2.3</h3><p>One job per subject, without surface reconstruction; output in <code>MNI152NLin2009cAsym</code> at 2 mm.</p></li>
+      <li><h3>Parcellation</h3><p>Mean signal per region with nilearn (<code>NiftiLabelsMasker</code>, or <code>NiftiMapsMasker</code> for probabilistic atlases). This is <code>quasiraw</code>.</p></li>
+      <li><h3>Denoising</h3><p>One <code>nilearn.signal.clean</code> call: 24 motion parameters plus white-matter and CSF signals, scrubbing above 0.5 mm FD, detrending, 0.01–0.1 Hz band-pass, z-scoring. Runs with fewer than 50 volumes left are dropped. This is <code>preproc</code>.</p></li>
+      <li><h3>Connectivity</h3><p>Pearson correlation per run with nilearn's <code>ConnectivityMeasure</code>, stored as float32.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="atlases">
+  <div class="wrap split">
+    <div><span class="label">Atlases</span><h2>52 parcellations, 10 to 1,024 regions</h2></div>
+    <div>
+      <p class="body">Every atlas is applied to every run under identical processing, so representations are
+        comparable across granularities and atlas families.</p>
+      <div class="families">
+        <div class="fam"><b>Schaefer</b><span>100–1000 · 7 &amp; 17 networks</span></div>
+        <div class="fam"><b>Schaefer + Tian</b><span>432, 450</span></div>
+        <div class="fam"><b>Yan (homotopic)</b><span>100–800 · Yeo7 / Yeo17 / Kong17</span></div>
+        <div class="fam"><b>DiFuMo</b><span>64–1024 · probabilistic</span></div>
+        <div class="fam"><b>BASC</b><span>64–444</span></div>
+        <div class="fam"><b>Smith ICA</b><span>10, 20, 70 · probabilistic</span></div>
+        <div class="fam"><b>Yeo</b><span>7, 17</span></div>
+        <div class="fam"><b>MSDL</b><span>39 · probabilistic</span></div>
+        <div class="fam"><b>Tian subcortex</b><span>16, 32, 50</span></div>
+        <div class="fam"><b>Pauli</b><span>16</span></div>
+        <div class="fam"><b>AAL</b><span>166</span></div>
+        <div class="fam"><b>AICHA</b><span>384</span></div>
+        <div class="fam"><b>Destrieux</b><span>150</span></div>
+        <div class="fam"><b>Harvard-Oxford</b><span>48 cortical, 21 subcortical</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pretraining">
+  <div class="wrap split">
+    <div><span class="label">Use</span><h2>Pretraining on Open-fMIND</h2></div>
+    <div>
+      <p class="body">
+        A Brain-Semantoks encoder pretrained on Open-fMIND alone matches the published checkpoint pretrained on
+        <strong>UK Biobank</strong> on HCP-YA, with frozen features and identical folds and classifiers.
+      </p>
+      <div class="result">
+        <div><div class="n">0.945</div><div class="vs">HCP-YA sex, AUROC<br>UK Biobank 0.945 · random init 0.877</div></div>
+        <div><div class="n">0.415</div><div class="vs">HCP-YA cognition, Pearson r<br>UK Biobank 0.409 · random init 0.380</div></div>
+        <div><div class="n">62.0%</div><div class="vs">ABIDE diagnosis, balanced accuracy<br>UK Biobank 63.1%</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="access">
+  <div class="wrap split">
+    <div><span class="label">Access</span><h2>Quick start</h2></div>
+    <div>
+      <p class="body">Files are packed into ~3 GB tar shards that keep their BIDS paths, split by atlas and by
+        <code>rest</code> / <code>task</code>. A parquet index locates every file, so you can filter, stream whole shards,
+        or fetch a single run with an HTTP range request.</p>
+
+      <div class="copy-row"><h3>Choose runs with the index, stream with WebDataset</h3><button class="icon-btn" data-copy="py1">Copy</button></div>
+<pre id="py1"><span class="k">import</span> gzip, json
+<span class="k">import</span> pandas <span class="k">as</span> pd, nibabel <span class="k">as</span> nib, webdataset <span class="k">as</span> wds
+
+base = <span class="s">"https://huggingface.co/datasets/cbarbano/open-fmind/resolve/main"</span>
+idx = pd.read_parquet(<span class="s">f"{base}/index/preproc_timeseries.parquet"</span>,
+                      filters=[(<span class="s">"atlas"</span>, <span class="s">"=="</span>, <span class="s">"schaefer400"</span>), (<span class="s">"task_type"</span>, <span class="s">"=="</span>, <span class="s">"rest"</span>)])
+
+urls = [<span class="s">f"{base}/{s}"</span> <span class="k">for</span> s <span class="k">in</span> sorted(idx.shard.unique())]
+<span class="k">for</span> sample <span class="k">in</span> wds.WebDataset(urls, shardshuffle=<span class="k">False</span>):
+    img = nib.Nifti1Image.from_bytes(gzip.decompress(sample[<span class="s">"nii.gz"</span>]))
+    ts = img.get_fdata().squeeze().T      <span class="c"># (n_timepoints, n_rois)</span>
+    meta = json.loads(sample[<span class="s">"json"</span>])     <span class="c"># RepetitionTime, ROILabels, TaskType, ...</span></pre>
+
+      <div class="copy-row"><h3>Download one atlas and rebuild the BIDS tree</h3><button class="icon-btn" data-copy="sh1">Copy</button></div>
+<pre id="sh1">hf download cbarbano/open-fmind --repo-type dataset \
+   --include <span class="s">"preproc/timeseries/atlas-schaefer400/*"</span> --local-dir open-fmind
+cat open-fmind/preproc/timeseries/atlas-schaefer400/*/shard-*.tar | tar -xf - -i</pre>
+
+      <p class="body" style="margin-top:36px; font-size:.92rem">
+        <strong>Licenses.</strong> Derived from public OpenNeuro datasets, each under its own license (251 CC0, 34 PDDL,
+        30 not stated, 5 CC-BY / CC-BY-SA, 1 CC-BY-NC, 1 other). <code>LICENSES.tsv</code> lists the license, authors, DOI
+        and requested acknowledgement of every source dataset; please cite the datasets you use.
+        Built on OpenNeuro, fMRIPrep and nilearn.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cite">
+  <div class="wrap split">
+    <div><span class="label">Cite</span><h2>Citation</h2></div>
+    <div>
+      <p class="body">Barbano, C. A., Marraffini, G., Wassermann, D. <em>Open-fMIND: A Large-Scale Open-Access fMRI Corpus
+        for Pretraining Brain Foundation Models</em>. Preprint, 2026.</p>
+      <div class="copy-row" style="margin-top:12px"><span></span><button class="icon-btn" data-copy="bib">Copy BibTeX</button></div>
+<pre id="bib" style="margin-top:8px">@article{barbano2026openfmind,
+  title   = {Open-fMIND: A Large-Scale Open-Access fMRI Corpus for Pretraining Brain Foundation Models},
+  author  = {Barbano, Carlo Alberto and Marraffini, Giovanni and Wassermann, Demian},
+  journal = {Preprint},
+  year    = {2026}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Open-fMIND v1.0 · <a href="https://www.inria.fr/fr/mind">MIND team, Inria</a></span>
+    <span><a href="https://huggingface.co/datasets/cbarbano/open-fmind">Hugging Face</a></span>
+  </div>
+</footer>
+
+<script>
+/* ---------- nav border on scroll, copy buttons ---------- */
+const nav = document.getElementById("nav");
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 8), { passive: true });
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+  await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent);
+  const old = b.textContent; b.textContent = "Copied"; setTimeout(() => (b.textContent = old), 1200);
+}));
+
+/* ---------- interactive UMAP ---------- */
+(async function () {
+  const canvas = document.getElementById("umap"), ctx = canvas.getContext("2d");
+  const stage = document.getElementById("stage"), tip = document.getElementById("tip");
+  const legend = document.getElementById("legend"), selinfo = document.getElementById("selinfo");
+  const D = await (await fetch("data/umap.json")).json();
+  document.getElementById("loading").remove();
+
+  const N = D.n_runs, Q = D.qmax;
+  const X = Float32Array.from(D.x), Y = Float32Array.from(D.y.map(v => Q - v));   // y up
+  const dsRGB = D.datasets.map(d => d.color);
+  const REST = "#eb6834", TASK = "#2a78d6", GREY = "#d6d5d0", CLUSTER = "#256abf";
+  // motion: blue sequential ramp (steps 200 → 700), capped at the 95th percentile
+  const RAMP = ["#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"];
+  const fdSorted = Float32Array.from(D.fd).sort();
+  const fdLo = fdSorted[Math.floor(0.02 * N)], fdHi = fdSorted[Math.floor(0.95 * N)];
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const RAMP_RGB = RAMP.map(hex);
+  const fdColor = D.fd.map(v => {
+    const t = Math.min(1, Math.max(0, (v - fdLo) / (fdHi - fdLo))) * (RAMP.length - 1);
+    const i = Math.min(RAMP.length - 2, Math.floor(t)), f = t - i, a = RAMP_RGB[i], b = RAMP_RGB[i + 1];
+    return `rgb(${lerp(a[0], b[0], f) | 0},${lerp(a[1], b[1], f) | 0},${lerp(a[2], b[2], f) | 0})`;
+  });
+
+  // cluster centres for labels
+  const cl = {};
+  for (let i = 0; i < N; i++) { const c = D.c[i]; if (c < 0) continue; (cl[c] ||= { xs: [], ys: [] }); cl[c].xs.push(X[i]); cl[c].ys.push(Y[i]); }
+  const med = a => { const s = a.slice().sort((p, q) => p - q); return s[s.length >> 1]; };
+  const clusterCentres = Object.entries(cl).map(([k, v]) => ({ k, x: med(v.xs), y: med(v.ys), n: v.xs.length }));
+
+  // spatial grid for hover
+  const G = 64, cell = Q / G, grid = Array.from({ length: (G + 1) * (G + 1) }, () => []);
+  for (let i = 0; i < N; i++) grid[Math.floor(X[i] / cell) * (G + 1) + Math.floor(Y[i] / cell)].push(i);
+
+  let mode = "dataset", selected = -1, hover = -1;
+  let W = 0, H = 0, dpr = 1, k = 1, cx = Q / 2, cy = Q / 2;
+
+  // initial view: bulk of the points (1st–99th percentile)
+  const v = D.view, v0 = { x0: v[0][0], x1: v[1][0], y0: Q - v[1][1], y1: Q - v[0][1] };
+  function fit() {
+    const pad = 0.92;
+    k = Math.min(W / (v0.x1 - v0.x0), H / (v0.y1 - v0.y0)) * pad;
+    cx = (v0.x0 + v0.x1) / 2; cy = (v0.y0 + v0.y1) / 2;
+  }
+  const sx = x => (x - cx) * k + W / 2, sy = y => H / 2 - (y - cy) * k;
+  const ix = px => (px - W / 2) / k + cx, iy = py => cy - (py - H / 2) / k;
+
+  function resize() {
+    const r = stage.getBoundingClientRect(); dpr = devicePixelRatio || 1;
+    const first = W === 0; W = r.width; H = r.height;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    if (first) fit(); draw();
+  }
+
+  function colorOf(i) {
+    if (mode === "dataset") return dsRGB[D.d[i]];
+    if (mode === "type") return D.rest[i] ? REST : TASK;
+    if (mode === "fd") return fdColor[i];
+    return D.c[i] >= 0 ? CLUSTER : GREY;
+  }
+
+  let raf = 0;
+  function draw() { cancelAnimationFrame(raf); raf = requestAnimationFrame(render); }
+  function render() {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    const base = Math.max(2.2, Math.min(6, 2.2 * Math.pow(k / (W / Q * 1.4), 0.45)));
+    const r = base, sel = selected;
+    ctx.globalAlpha = sel >= 0 ? 0.13 : (mode === "cluster" ? 0.75 : 0.85);
+    // in cluster mode draw the grey bulk first so clusters sit on top
+    const passes = mode === "cluster" ? [i => D.c[i] < 0, i => D.c[i] >= 0] : [() => true];
+    for (const pass of passes) {
+      let last = null;
+      for (let i = 0; i < N; i++) {
+        if (!pass(i)) continue;
+        const x = sx(X[i]), y = sy(Y[i]);
+        if (x < -5 || y < -5 || x > W + 5 || y > H + 5) continue;
+        const c = colorOf(i); if (c !== last) { ctx.fillStyle = c; last = c; }
+        ctx.fillRect(x - r / 2, y - r / 2, r, r);
+      }
+    }
+    if (sel >= 0) {   // selected dataset on top, full strength, with a surface ring
+      ctx.globalAlpha = 1;
+      const rr = r + 1.5;
+      for (let i = 0; i < N; i++) {
+        if (D.d[i] !== sel) continue;
+        const x = sx(X[i]), y = sy(Y[i]);
+        ctx.fillStyle = "#fcfcfb"; ctx.beginPath(); ctx.arc(x, y, rr / 2 + 1.2, 0, 7); ctx.fill();
+        ctx.fillStyle = mode === "dataset" ? dsRGB[sel] : colorOf(i); ctx.beginPath(); ctx.arc(x, y, rr / 2, 0, 7); ctx.fill();
+      }
+    }
+    if (mode === "cluster") {
+      ctx.globalAlpha = 1; ctx.font = "600 12px Inter, system-ui, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      for (const c of clusterCentres) {
+        const x = sx(c.x), y = sy(c.y);
+        ctx.lineWidth = 3; ctx.strokeStyle = "#fcfcfb"; ctx.strokeText(c.k, x, y);
+        ctx.fillStyle = "#0b0b0b"; ctx.fillText(c.k, x, y);
+      }
+    }
+    if (hover >= 0) {
+      ctx.globalAlpha = 1;
+      const x = sx(X[hover]), y = sy(Y[hover]);
+      ctx.strokeStyle = "#0b0b0b"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x, y, r / 2 + 4, 0, 7); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  /* legend */
+  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function key(color, text) { const s = el("span", "key"); const d = el("span", "dot"); d.style.background = color; s.append(d, document.createTextNode(text)); return s; }
+  function renderLegend() {
+    legend.replaceChildren();
+    if (mode === "dataset") legend.append(el("span", null, `${D.datasets.length} datasets · one colour each, set by position`));
+    if (mode === "type") { const nr = D.rest.reduce((a, b) => a + b, 0); legend.append(key(REST, `Rest · ${(100 * nr / N).toFixed(0)}%`), key(TASK, `Task · ${(100 * (N - nr) / N).toFixed(0)}%`)); }
+    if (mode === "fd") {
+      const s = el("span", "key"); const ramp = el("span", "ramp"); ramp.style.background = `linear-gradient(90deg, ${RAMP.join(",")})`;
+      s.append(document.createTextNode(`${(fdLo / 1000).toFixed(2)} mm`), ramp, document.createTextNode(`≥ ${(fdHi / 1000).toFixed(2)} mm mean FD`));
+      legend.append(s);
+    }
+    if (mode === "cluster") { const nc = D.c.filter(c => c >= 0).length; legend.append(key(CLUSTER, `In a dense cluster · ${(100 * nc / N).toFixed(0)}%`), key(GREY, "Between clusters")); }
+  }
+
+  /* modes */
+  document.querySelectorAll("#modes button").forEach(b => b.addEventListener("click", () => {
+    mode = b.dataset.mode;
+    document.querySelectorAll("#modes button").forEach(o => o.setAttribute("aria-pressed", o === b));
+    canvas.setAttribute("aria-label", `UMAP of the connectivity of ${N.toLocaleString("en")} runs, coloured by ${b.textContent.toLowerCase()}`);
+    renderLegend(); draw();
+  }));
+
+  /* dataset search / selection */
+  const q = document.getElementById("q"), clear = document.getElementById("clear"), dl = document.getElementById("dslist");
+  const label = d => d.name ? `${d.id} — ${d.name}` : d.id;
+  D.datasets.forEach(d => { const o = document.createElement("option"); o.value = label(d); dl.append(o); });
+  function select(i) {
+    selected = i; clear.hidden = i < 0;
+    selinfo.replaceChildren();
+    if (i >= 0) {
+      const d = D.datasets[i];
+      const b = el("b", null, d.id);
+      selinfo.append(b, document.createTextNode(` ${d.name ? "· " + d.name + " " : ""}· ${d.runs.toLocaleString("en")} runs`));
+      if (q.value !== label(d)) q.value = label(d);
+    } else q.value = "";
+    draw();
+  }
+  q.addEventListener("change", () => {
+    const s = q.value.trim().toLowerCase(); if (!s) return select(-1);
+    let i = D.datasets.findIndex(d => label(d).toLowerCase() === s);
+    if (i < 0) i = D.datasets.findIndex(d => d.id === s.split(/\s/)[0]);
+    if (i < 0) i = D.datasets.findIndex(d => label(d).toLowerCase().includes(s));
+    select(i);
+  });
+  clear.addEventListener("click", () => select(-1));
+
+  /* hover */
+  function nearest(px, py) {
+    const x = ix(px), y = iy(py), rad = 14 / k;
+    let best = -1, bd = rad * rad;
+    const g0 = Math.max(0, Math.floor((x - rad) / cell)), g1 = Math.min(G, Math.floor((x + rad) / cell));
+    const h0 = Math.max(0, Math.floor((y - rad) / cell)), h1 = Math.min(G, Math.floor((y + rad) / cell));
+    for (let a = g0; a <= g1; a++) for (let b = h0; b <= h1; b++) for (const i of grid[a * (G + 1) + b]) {
+      if (selected >= 0 && D.d[i] !== selected) continue;
+      const dx = X[i] - x, dy = Y[i] - y, dd = dx * dx + dy * dy;
+      if (dd < bd) { bd = dd; best = i; }
+    }
+    return best;
+  }
+  function showTip(i, px, py) {
+    tip.replaceChildren();
+    if (i < 0) { tip.classList.remove("on"); return; }
+    const d = D.datasets[D.d[i]];
+    const head = el("div", "ds"); const sw = el("i"); sw.style.background = d.color; head.append(sw, document.createTextNode(d.id));
+    tip.append(head);
+    if (d.name) tip.append(el("div", "nm", d.name));
+    const row = (k, v) => { const r = el("div", "row"); r.append(el("span", null, k), el("b", null, v)); tip.append(r); };
+    row("Task", D.tasks[D.t[i]]);
+    row("Type", D.rest[i] ? "rest" : "task");
+    row("Mean FD", `${(D.fd[i] / 1000).toFixed(3)} mm`);
+    row("Cluster", D.c[i] >= 0 ? String(D.c[i]) : "—");
+    tip.classList.add("on");
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    tip.style.left = `${px + 16 + tw > W ? px - tw - 16 : px + 16}px`;
+    tip.style.top = `${Math.max(0, Math.min(H - th, py - th / 2))}px`;
+  }
+
+  /* pan & zoom */
+  let drag = null, moved = false;
+  const pos = e => { const r = canvas.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
+  canvas.addEventListener("pointerdown", e => { drag = { p: pos(e), cx, cy }; moved = false; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener("pointermove", e => {
+    const [px, py] = pos(e);
+    if (drag) {
+      const dx = px - drag.p[0], dy = py - drag.p[1];
+      if (Math.abs(dx) + Math.abs(dy) > 3) { moved = true; canvas.classList.add("dragging"); }
+      if (moved) { cx = drag.cx - dx / k; cy = drag.cy + dy / k; hover = -1; showTip(-1); draw(); return; }
+    }
+    const h = nearest(px, py);
+    if (h !== hover) { hover = h; draw(); }
+    showTip(h, px, py);
+  });
+  canvas.addEventListener("pointerup", e => {
+    canvas.classList.remove("dragging");
+    if (drag && !moved) { const h = nearest(...pos(e)); select(h >= 0 ? (D.d[h] === selected ? -1 : D.d[h]) : -1); }
+    drag = null;
+  });
+  canvas.addEventListener("pointerleave", () => { hover = -1; showTip(-1); draw(); });
+  function zoomAt(f, px = W / 2, py = H / 2) {
+    const x = ix(px), y = iy(py);
+    k = Math.max(W / Q * 0.5, Math.min(k * f, W / Q * 60));
+    cx = x - (px - W / 2) / k; cy = y + (py - H / 2) / k; draw();
+  }
+  canvas.addEventListener("wheel", e => {
+    if (!(e.ctrlKey || e.metaKey)) return;
+    e.preventDefault(); zoomAt(Math.exp(-e.deltaY * 0.0025), ...pos(e));
+  }, { passive: false });
+  document.getElementById("zin").onclick = () => zoomAt(1.5);
+  document.getElementById("zout").onclick = () => zoomAt(1 / 1.5);
+  document.getElementById("zreset").onclick = () => { fit(); draw(); };
+
+  new ResizeObserver(resize).observe(stage);
+  resize();
+  renderLegend();
+})();
+</script>
+</body>
+</html>

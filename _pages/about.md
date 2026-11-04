@@ -41,14 +41,13 @@ redirect_from: [/about/, /about.html]
       <div class="project-body">
         <div class="project-head">
           <h3><a href="/research/#open-fmind">Open-fMIND</a></h3>
-          <span class="project-tag">Coming soon</span>
         </div>
         <p>An open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and FC matrices for several atlases.</p>
-        <p class="project-links"><a href="https://pages.saclay.inria.fr/carlo.barbano/open-fmind/">Project page</a></p>
+        <p class="project-links"><a href="/openfmind/">Project page</a><a href="https://huggingface.co/datasets/cbarbano/open-fmind">Dataset</a></p>
       </div>
       <ul class="project-stats">
-        <li><strong>14,016</strong> subjects</li>
-        <li><strong>52,505</strong> functional runs</li>
+        <li><strong>11,379</strong> subjects</li>
+        <li><strong>45,731</strong> functional runs</li>
         <li><strong>52</strong> atlases</li>
       </ul>
     </article>
