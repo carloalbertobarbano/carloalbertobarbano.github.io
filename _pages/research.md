@@ -21,7 +21,7 @@ layout: home
     <img class="project-figure" src="/images/research/brainpfn.svg" alt="BrainPFN overview">
     <ul class="theme-items">
       <li id="brainpfn"><strong><a href="/research/brainpfn/">BrainPFN</a>.</strong> Amortized brain–behaviour prediction with Prior-Data Fitted Networks. A transformer meta-trained on synthetic regression tasks built from real FC matrices predicts behavioural scores from a labelled context in one forward pass, without refitting.
-        <span class="ref"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · With D. Wassermann · <a href="/research/brainpfn/">Details</a></span></li>
+        <span class="ref"><a href="https://arxiv.org/abs/2611.06934">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a>, Preprint 2026 · With D. Wassermann · <a href="/research/brainpfn/">Details</a></span></li>
       <li id="open-fmind"><strong><a href="/openfmind/">Open-fMIND</a>.</strong> An open-access fMRI timeseries collection for self-supervised training of brain foundation models. It is built entirely from public OpenNeuro studies, uniformly preprocessed with a single pipeline, and released as parcellated ROI timeseries and FC matrices for several atlases. BrainPFN and the spectral filter work below are trained on data from Open-fMIND.
         <ul class="project-stats">
           <li><strong>11,379</strong> subjects</li>

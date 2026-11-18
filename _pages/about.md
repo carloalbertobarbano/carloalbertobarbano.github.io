@@ -33,7 +33,7 @@ redirect_from: [/about/, /about.html]
           <h3><a href="/research/#fmri">Foundation models for fMRI</a></h3>
         </div>
         <p>BrainPFN, a transformer meta-trained on synthetic tasks built from real functional connectivity (FC) matrices, predicts behavioural scores for a new cohort in a single forward pass, without refitting. It is most useful in small-sample studies, the common case in fMRI. Related work covers pretraining targets derived from FC and self-supervised learning from raw fMRI time series.</p>
-        <p class="project-links"><a href="/research/brainpfn/">BrainPFN</a><a href="https://inria.hal.science/hal-05767107">BrainPFN preprint</a><a href="/research/#fmri">More</a></p>
+        <p class="project-links"><a href="https://github.com/carloalbertobarbano/BrainPFN">Code &amp; Weights</a><a href="https://arxiv.org/abs/2611.06934">Paper</a><a href="/research/brainpfn/">See more</a></p>
       </div>
     </article>
 
@@ -43,7 +43,7 @@ redirect_from: [/about/, /about.html]
           <h3><a href="/research/#open-fmind">Open-fMIND</a></h3>
         </div>
         <p>An open fMRI collection built from public OpenNeuro studies, uniformly preprocessed and released as parcellated timeseries and FC matrices for several atlases.</p>
-        <p class="project-links"><a href="/openfmind/">Project page</a><a href="https://huggingface.co/datasets/cbarbano/open-fmind">Dataset</a></p>
+        <p class="project-links"><a href="/openfmind/">Project page</a><a href="https://arxiv.org/abs/2611.21215">Read the paper</a><a href="https://huggingface.co/datasets/cbarbano/open-fmind">Download the data</a></p>
       </div>
       <ul class="project-stats">
         <li><strong>11,379</strong> subjects</li>
@@ -58,7 +58,7 @@ redirect_from: [/about/, /about.html]
           <h3><a href="/research/#brain-anatomy">Foundation and normative models of brain anatomy</a></h3>
         </div>
         <p>AnatCL, a foundation model for anatomical brain MRI, normative models for anomaly detection, and models of brain and disease development.</p>
-        <p class="project-links"><a href="/research/anatcl/">AnatCL</a><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">AnatCL paper</a><a href="/research/#brain-anatomy">More</a></p>
+        <p class="project-links"><a href="https://github.com/EIDOSLAB/AnatCL">Code &amp; Weights</a><a href="https://www.sciencedirect.com/science/article/pii/S0167865525003848">Paper</a><a href="/research/anatcl/">See more</a></p>
       </div>
       <img class="project-media" src="/images/research/anatcl-card.svg" alt="AnatCL: anatomical MRI, morphological descriptors and contrastive pre-training">
     </article>
@@ -93,7 +93,7 @@ redirect_from: [/about/, /about.html]
       <div class="home-news">
       <h2>News</h2>
       <ul>
-        <li><span class="date">Sep. 2026</span><span><a href="https://inria.hal.science/hal-05767107">BrainPFN</a> preprint is out.</span></li>
+        <li><span class="date">Sep. 2026</span><span><a href="https://arxiv.org/abs/2611.06934">BrainPFN</a> preprint is out.</span></li>
         <li><span class="date">May 2026</span><span><a href="https://hal.science/hal-05632181">TIMBER</a> preprint, on self-supervised representation learning from raw fMRI time series, is out.</span></li>
         <li><span class="date">Nov. 2025</span><span>I am now a <strong>Starting Researcher</strong> at <a href="https://team.inria.fr/mind/">Inria Saclay, MIND team</a>.</span></li>
         <li><span class="date">Jan. 2025</span><span>Visiting Researcher at <a href="https://team.inria.fr/mind/">Inria MIND</a>, studying the link between functional connectivity and cognition with contrastive learning.</span></li>
@@ -127,9 +127,9 @@ redirect_from: [/about/, /about.html]
     <h2>Selected publications</h2>
     <ul>
       <li>
-        <a class="thumb" href="https://inria.hal.science/hal-05767107" tabindex="-1" aria-hidden="true"><img src="/images/pubs/brainpfn.png" alt="" loading="lazy" width="88" height="88"></a>
+        <a class="thumb" href="https://arxiv.org/abs/2611.06934" tabindex="-1" aria-hidden="true"><img src="/images/pubs/brainpfn.png" alt="" loading="lazy" width="88" height="88"></a>
         <div>
-          <span class="title"><a href="https://inria.hal.science/hal-05767107">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a></span>
+          <span class="title"><a href="https://arxiv.org/abs/2611.06934">BrainPFN: Amortized Brain-Behaviour Prediction via Prior-Data Fitted Networks</a></span>
           <span class="meta"><u>C. A. Barbano</u>, D. Wassermann</span>
           <span class="meta"><span class="venue">Preprint</span>, 2026</span>
         </div>
