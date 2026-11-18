@@ -234,11 +234,11 @@
       <div><div class="n">322</div><div class="t">OpenNeuro datasets</div></div>
       <div><div class="n">11,379</div><div class="t">subjects</div></div>
       <div><div class="n">45,731</div><div class="t">functional runs</div></div>
-      <div><div class="n">52</div><div class="t">atlases, 14 families</div></div>
+      <div><div class="n">52</div><div class="t">atlases, 15 families</div></div>
       <div><div class="n">2.38<small>M</small></div><div class="t">timeseries (runs × atlases)</div></div>
       <div><div class="n">11.4<small>M</small></div><div class="t">volumes</div></div>
       <div><div class="n">6,044</div><div class="t">hours of scanning</div></div>
-      <div><div class="n">4.26<small>TB</small></div><div class="t">in 1,787 shards</div></div>
+      <div><div class="n">4.35<small>TB</small></div><div class="t">in 1,821 shards</div></div>
     </div>
   </div>
 </header>
@@ -345,7 +345,7 @@
       <li><h3>fMRIPrep 25.2.3</h3><p>One job per subject, without surface reconstruction; output in <code>MNI152NLin2009cAsym</code> at 2 mm.</p></li>
       <li><h3>Parcellation</h3><p>Mean signal per region with nilearn (<code>NiftiLabelsMasker</code>, or <code>NiftiMapsMasker</code> for probabilistic atlases). This is <code>quasiraw</code>.</p></li>
       <li><h3>Denoising</h3><p>One <code>nilearn.signal.clean</code> call: 24 motion parameters plus white-matter and CSF signals, scrubbing above 0.5 mm FD, detrending, 0.01–0.1 Hz band-pass, z-scoring. Runs with fewer than 50 volumes left are dropped. This is <code>preproc</code>.</p></li>
-      <li><h3>Connectivity</h3><p>Pearson correlation per run with nilearn's <code>ConnectivityMeasure</code>, stored as float32.</p></li>
+      <li><h3>Connectivity</h3><p>Correlation per run with nilearn's <code>ConnectivityMeasure</code> (default settings), stored as float32.</p></li>
     </ol>
   </div>
 </section>
@@ -369,6 +369,7 @@
         <div class="fam"><b>Pauli</b><span>16</span></div>
         <div class="fam"><b>AAL</b><span>166</span></div>
         <div class="fam"><b>AICHA</b><span>384</span></div>
+        <div class="fam"><b>Glasser (HCP-MMP1.0)</b><span>360</span></div>
         <div class="fam"><b>Destrieux</b><span>150</span></div>
         <div class="fam"><b>Harvard-Oxford</b><span>48 cortical, 21 subcortical</span></div>
       </div>
@@ -435,12 +436,13 @@ cat open-fmind/preproc/timeseries/atlas-schaefer400/*/shard-*.tar | tar -xf - -i
     <div><span class="label">Cite</span><h2>Citation</h2></div>
     <div>
       <p class="body">Barbano, C. A., Marraffini, G., Wassermann, D. <em>Open-fMIND: A Large-Scale Open-Access fMRI Corpus
-        for Pretraining Brain Foundation Models</em>. Preprint, 2026.</p>
+        for Pretraining Brain Foundation Models</em>. arXiv preprint
+        <a href="https://arxiv.org/abs/2611.21215">arXiv:2611.21215</a>, 2026.</p>
       <div class="copy-row" style="margin-top:12px"><span></span><button class="icon-btn" data-copy="bib">Copy BibTeX</button></div>
 <pre id="bib" style="margin-top:8px">@article{barbano2026openfmind,
   title   = {Open-fMIND: A Large-Scale Open-Access fMRI Corpus for Pretraining Brain Foundation Models},
   author  = {Barbano, Carlo Alberto and Marraffini, Giovanni and Wassermann, Demian},
-  journal = {Preprint},
+  journal = {arXiv preprint arXiv:2611.21215},
   year    = {2026}
 }</pre>
     </div>
