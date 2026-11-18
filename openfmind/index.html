@@ -50,6 +50,9 @@
   nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
   .brand { font-weight: 600; letter-spacing: -0.02em; text-decoration: none; font-size: 1.02rem; }
   .brand span { color: var(--accent); }
+  .nav-left { display: flex; align-items: center; gap: 18px; }
+  .home-link { text-decoration: none; color: var(--ink-2); font-size: 0.9rem; padding-right: 18px; border-right: 1px solid var(--rule); transition: color .15s; }
+  .home-link:hover { color: var(--ink); }
   .nav-links { display: flex; gap: 28px; align-items: center; font-size: 0.9rem; }
   .nav-links a { text-decoration: none; color: var(--ink-2); transition: color .15s; }
   .nav-links a:hover { color: var(--ink); }
@@ -202,7 +205,10 @@
 
 <nav id="nav">
   <div class="wrap">
-    <a class="brand" href="#">Open-f<span>MIND</span></a>
+    <div class="nav-left">
+      <a class="home-link" href="/" title="Back to the homepage">← Home</a>
+      <a class="brand" href="#">Open-f<span>MIND</span></a>
+    </div>
     <div class="nav-links">
       <a href="#embedding">Explore</a>
       <a href="#data">Data</a>
@@ -452,7 +458,7 @@ cat open-fmind/preproc/timeseries/atlas-schaefer400/*/shard-*.tar | tar -xf - -i
 
 <footer>
   <div class="wrap">
-    <span>Open-fMIND v1.0 · <a href="https://www.inria.fr/fr/mind">MIND team, Inria</a></span>
+    <span>Open-fMIND v1.0 · <a href="https://www.inria.fr/fr/mind">MIND team, Inria</a> · <a href="/">Carlo Alberto Barbano</a></span>
     <span><a href="https://huggingface.co/datasets/cbarbano/open-fmind">Hugging Face</a></span>
   </div>
 </footer>
