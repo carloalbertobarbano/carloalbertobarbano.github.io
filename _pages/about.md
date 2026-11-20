@@ -93,6 +93,7 @@ redirect_from: [/about/, /about.html]
       <div class="home-news">
       <h2>News</h2>
       <ul>
+        <li><span class="date">Nov. 2026</span><span><a href="/openfmind/">Open-fMIND</a> is released: parcellated fMRI timeseries and FC matrices from 322 OpenNeuro datasets (11,379 subjects, 52 atlases). <a href="https://arxiv.org/abs/2611.21215">Paper</a> · <a href="https://huggingface.co/datasets/cbarbano/open-fmind">Data</a>.</span></li>
         <li><span class="date">Sep. 2026</span><span><a href="https://arxiv.org/abs/2611.06934">BrainPFN</a> preprint is out.</span></li>
         <li><span class="date">May 2026</span><span><a href="https://hal.science/hal-05632181">TIMBER</a> preprint, on self-supervised representation learning from raw fMRI time series, is out.</span></li>
         <li><span class="date">Nov. 2025</span><span>I am now a <strong>Starting Researcher</strong> at <a href="https://team.inria.fr/mind/">Inria Saclay, MIND team</a>.</span></li>
